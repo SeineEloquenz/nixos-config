@@ -11,6 +11,13 @@
       # Include home manager
       <home-manager/nixos>
     ];
+
+  # Get ready for flakes
+  nix.package = pkgs.nixFlakes;
+  nix.extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -24,6 +31,9 @@
   # Enable swap on luks
   boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".device = "/dev/disk/by-uuid/b88b46e4-d105-4a66-ab9c-25ff608d16b4";
   boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".keyFile = "/crypto_keyfile.bin";
+
+  # Enable zsh
+  programs.zsh.enable = true;
 
   networking.hostName = "mcgzen"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -47,6 +57,9 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  # Enable gnome keyring in pam
+  security.pam.services.gdm.enableGnomeKeyring = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -80,11 +93,15 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+  # Make zsh default shell
+  users.defaultUserShell = pkgs.zsh;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alexa = {
     isNormalUser = true;
     description = "Alexander Linder";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
     #  thunderbird
@@ -107,7 +124,6 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     nano
-    zsh
     wget
     git
     git-lfs
