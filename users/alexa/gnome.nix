@@ -6,6 +6,8 @@
       ./gnome-theming.nix
     ];
 
+  home.file.".face".source = ~/.dotfiles/files/obiwan.jpg;
+
   dconf.settings = {
     "org/gnome/shell" = {
       enabled-extensions = [
