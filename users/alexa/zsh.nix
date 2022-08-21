@@ -15,9 +15,8 @@
 
     history = {
       ignoreSpace = true;
-      expireDuplicatesFirst = true;
-      save = 100000000;
-      size = 1000000000;
+      save = 100000;
+      size = 100000;
     };
 
     initExtraBeforeCompInit = ''
