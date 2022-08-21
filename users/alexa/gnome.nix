@@ -38,7 +38,6 @@
     "org/gnome/desktop/interface" = {
       font-antialiasing = "grayscale";
       font-hinting = "full";
-      font-name = "Montserrat Semi-Bold 10";
       document-font-name = "Montserrat Semi-Bold 10";
       monospace-font-name = "RobotoMono Nerd Font Medium 10";
     };
