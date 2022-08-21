@@ -57,6 +57,7 @@
     wget
     git
     git-lfs
+    git-crypt
     gnupg
   ];
 
