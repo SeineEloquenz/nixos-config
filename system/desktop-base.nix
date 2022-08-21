@@ -11,6 +11,7 @@
   services.xserver = {
     layout = "de";
     xkbVariant = "";
+    xkbModel = "pc105";
   };
 
   # Enable automatic login for the user. - we always use luks, therefore we don't want to enter pws twice
