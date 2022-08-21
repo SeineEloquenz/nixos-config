@@ -41,6 +41,10 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  services.xserver.excludePackages = with pkgs; [
+    xterm
+  ];
+
   environment.systemPackages = with pkgs; [
     layan-kde
     layan-gtk-theme

@@ -74,7 +74,6 @@
     # networking
     dig
     tcpdump
-    netstat
     iputils
     # tools
     imagemagick
