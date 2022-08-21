@@ -20,6 +20,7 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    neofetch
     nextcloud-client
     #jetbrains.webstorm
     #jetbrains.idea-ultimate
