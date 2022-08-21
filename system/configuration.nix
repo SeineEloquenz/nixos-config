@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./common.nix
       ./gnome-desktop.nix
+      ./wireguard.nix
       # Include home manager
       <home-manager/nixos>
     ];
