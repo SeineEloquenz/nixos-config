@@ -107,7 +107,7 @@
     #  thunderbird
     ];
     openssh.authorizedKeys.keys = [
-      "ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAG2dlvxsK8sFLZaqupo3mqEU2llLMkep87cwW9Zu77lBRdPI7X/UOWV5rFToOD/gprWeNNM2Y/a4GCI1jc1X3QYhgHwkf+3odCYYy+0YT/pxjwl3XTKb05bJlOaK07j3j/XZoDMEgfgb+Ma7gQJOqL9qBA9mg6kYNOXSTkz4Wq2KgOjcQ== alexa@mcg-pres"
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6fDeJXb0a+UFwlOeF6hY8Y5vAGSTTBVQ/2akB2ViXQaVascGR6Hl9bKMKiQ6+Qbg8kGNDJ4iEDalN1Q/E2T23QHnrbOuoLf+xF5l3Zd5wyhBIsNj2n3jr+SL66uyJcgJuFGE7y1cHN1fEh//HUb5RmoYdW9+utaaXUdvSw6xoRnpc3hmOPvLc8/fpO9utIj0TbVKL+VyM+dKiuGF0O0huGftUAZht6Zy1rdijCbEkslf6jCap/HNBPjbna/K6lfFOBgeCBhYAvQoUvx94k8qiyBIOKJaqGiKSOzFpm6hhOdD4I7yWNTDKsspF7jek5S8bWMGFftMQlO1n5J+WODaUgTQx4OKfLVnaiB7BXVt4lo0WaI+mXnjQvqxjifaQB1MP0LmE+ttLZ4ftFY/FCqzA1NMFoa5bXsxjkGkdHem8Vt38qU6V47iPBEoZJkIu6c/54irnngMaucnu5JcxXLST520pbIwi0KlmW3NvRtEB63nk6e3GcZGHcZXHG3hVzV0= alexa@mcg-pres"
     ];
   };
 
@@ -150,7 +150,9 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [
+    22
+  ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
