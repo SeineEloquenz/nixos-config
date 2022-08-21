@@ -1,11 +1,22 @@
 { config, pkgs, ... }:
 
 {
-  # Get ready for flakes
-  nix.package = pkgs.nixFlakes;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    settings.auto-optimise-store = true;
+    package = pkgs.nixUnstable;
+    # for nix-direnv, flakes
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+    };
+  };
+
+  home-manager.useGlobalPkgs = true;
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
