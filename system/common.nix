@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   nix = {
     settings.auto-optimise-store = true;
     package = pkgs.nixUnstable;
