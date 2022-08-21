@@ -50,6 +50,7 @@
     layan-gtk-theme
     tela-icon-theme
     firefox
+    adoptopenjdk-bin
   ];
 
   # Fonts
