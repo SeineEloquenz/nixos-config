@@ -41,6 +41,9 @@
   services.printing.enable = true;
 
   environment.systemPackages = with pkgs; [
+    layan-kde
+    layan-gtk-theme
+    tela-icon-theme
     firefox
   ];
 

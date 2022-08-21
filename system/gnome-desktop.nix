@@ -16,4 +16,30 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.appindicator
+    gnomeExtensions.vitals
+    gnomeExtensions.espresso
+    gnomeExtensions.gsconnect
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.x11-gestures
+    gnomeExtensions.dash-to-dock
+  ];
+
+  services.udev.packages = with pkgs; [
+    gnome.gnome-settings-daemon
+  ];
+
+  environment.gnome.excludePackages = (with pkgs; [
+    gnome-photos
+    gnome-tour
+  ]) ++ (with pkgs.gnome; [
+    gnome-music
+    epiphany # web browser
+    tali # poker game
+    iagno # go game
+    hitori # sudoku game
+    atomix # puzzle game
+  ]);
+
 }

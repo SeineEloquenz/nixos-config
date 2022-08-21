@@ -4,6 +4,7 @@
   imports =
     [ # Include zsh config
       ./zsh.nix
+      ./gnome-theming.nix
     ];
 
   # Home Manager needs a bit of information about you and the
@@ -29,7 +30,5 @@
     nextcloud-client
     #jetbrains.webstorm
     #jetbrains.idea-ultimate
-    #Theming
-    layan-gtk-theme    
   ];
 }
