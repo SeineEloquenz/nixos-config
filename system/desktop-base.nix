@@ -65,8 +65,8 @@
   ];
   fonts.enableDefaultFonts = true;
   fonts.fontconfig.defaultFonts = {
-    monospace = ["Roboto Mono"];
-    sansSerif = ["Montserrat Regular"];
+    monospace = ["RobotoMono Nerd Font"];
+    sansSerif = ["Montserrat Bold"];
     serif = ["Noto Serif"];
   };
 

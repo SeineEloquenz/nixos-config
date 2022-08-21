@@ -25,6 +25,7 @@
     gnomeExtensions.dash-to-dock
     gnomeExtensions.ddterm
     gnome.gnome-terminal
+    gnome.gnome-tweaks
   ];
 
   services.udev.packages = with pkgs; [
