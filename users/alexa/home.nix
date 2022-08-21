@@ -5,7 +5,7 @@
     [ # Include zsh config
       ./zsh.nix
       ./gnome.nix
-      ./dev.nix
+      ./work.nix
     ];
 
   # Home Manager needs a bit of information about you and the

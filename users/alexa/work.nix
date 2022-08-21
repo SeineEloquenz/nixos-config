@@ -4,5 +4,6 @@
     jetbrains.idea-ultimate
     vscodium-fhs      
     maven
+    texlive.combined.scheme-full
   ];
 }
