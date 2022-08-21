@@ -34,6 +34,7 @@
   };
 
   home.packages = with pkgs; [
+    pinentry
     neofetch
     nextcloud-client
     #jetbrains.webstorm
