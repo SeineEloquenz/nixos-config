@@ -62,6 +62,7 @@
   # Common packages
 
   environment.systemPackages = with pkgs; [
+    # base
     nano
     htop
     curl
@@ -70,6 +71,14 @@
     git-lfs
     git-crypt
     gnupg
+    # networking
+    dig
+    tcpdump
+    netstat
+    iputils
+    # tools
+    imagemagick
+    
   ];
 
 }

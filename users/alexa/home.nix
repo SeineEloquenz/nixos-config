@@ -45,6 +45,9 @@
     inkscape
     vlc
     sublime-music
+    schildichat
+    fragments
+    libreoffice
     #jetbrains.webstorm
     #jetbrains.idea-ultimate
   ];
