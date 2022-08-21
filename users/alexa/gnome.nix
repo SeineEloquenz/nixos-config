@@ -30,6 +30,10 @@
       backspace-binding = "auto";
       delete-binding = "auto";  
     };
+    "org/gnome/desktop/background" = {
+      picture-uri='file://~/.dotfiles/wallpaper.png';
+      picture-uri-dark='file://~/.dotfiles/wallpaper.png';
+    };
     "org/gnome/shell/tweaks" = { show-extensions-notice = false; };
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false;
