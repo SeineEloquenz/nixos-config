@@ -24,6 +24,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.x11-gestures
     gnomeExtensions.dash-to-dock
+    gnome.gnome-terminal
   ];
 
   services.udev.packages = with pkgs; [
@@ -33,6 +34,7 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
+    gnome-console
   ]) ++ (with pkgs.gnome; [
     gnome-music
     epiphany # web browser

@@ -48,4 +48,16 @@
     ];
   };
 
+  # Common packages
+
+  environment.systemPackages = with pkgs; [
+    nano
+    htop
+    curl
+    wget
+    git
+    git-lfs
+    gnupg
+  ];
+
 }

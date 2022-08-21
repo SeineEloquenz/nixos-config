@@ -4,7 +4,7 @@
   imports =
     [ # Include zsh config
       ./zsh.nix
-      ./gnome-theming.nix
+      ./gnome.nix
     ];
 
   # Home Manager needs a bit of information about you and the

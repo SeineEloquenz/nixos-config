@@ -47,5 +47,22 @@
     firefox
   ];
 
+  # Fonts
+
+  fonts.fonts = with pkgs; [
+    noto-fonts
+    roboto
+    roboto-mono
+    emojione
+    montserrat
+    (nerdfonts.override { fonts = ["RobotoMono"]; })
+  ];
+  fonts.enableDefaultFonts = true;
+  fonts.fontconfig.defaultFonts = {
+    monospace = ["Roboto Mono"];
+    sansSerif = ["Montserrat Regular"];
+    serif = ["Noto Serif"];
+  };
+
 }
 
