@@ -40,6 +40,11 @@
     pinentry
     neofetch
     nextcloud-client
+    polymc
+    gimp
+    inkscape
+    vlc
+    sublime-music
     #jetbrains.webstorm
     #jetbrains.idea-ultimate
   ];
