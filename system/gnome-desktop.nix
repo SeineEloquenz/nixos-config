@@ -21,9 +21,9 @@
     gnomeExtensions.vitals
     gnomeExtensions.espresso
     gnomeExtensions.gsconnect
-    gnomeExtensions.blur-my-shell
     gnomeExtensions.x11-gestures
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.ddterm
     gnome.gnome-terminal
   ];
 
