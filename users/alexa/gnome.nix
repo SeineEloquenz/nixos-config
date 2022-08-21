@@ -34,6 +34,9 @@
       picture-uri = "file:///home/alexa/.dotfiles/files/wallpaper.png";
       picture-uri-dark = "file:///home/alexa/.dotfiles/files/wallpaper.png";
     };
+    "org/gnome/desktop/wm/keybindings" = {
+      close = [ "<Super>q" ];
+    };
     "org/gnome/shell/tweaks" = { show-extensions-notice = false; };
     "org/gnome/desktop/peripherals/touchpad" = {
       natural-scroll = false;
