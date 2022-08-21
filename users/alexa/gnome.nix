@@ -31,8 +31,8 @@
       delete-binding = "auto";  
     };
     "org/gnome/desktop/background" = {
-      picture-uri='file://~/.dotfiles/wallpaper.png';
-      picture-uri-dark='file://~/.dotfiles/wallpaper.png';
+      picture-uri = "file:///home/alexa/.dotfiles/files/wallpaper.png";
+      picture-uri-dark = "file:///home/alexa/.dotfiles/files/wallpaper.png";
     };
     "org/gnome/shell/tweaks" = { show-extensions-notice = false; };
     "org/gnome/desktop/peripherals/touchpad" = {
