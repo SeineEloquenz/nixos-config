@@ -5,12 +5,15 @@
     [ # Include zsh config
       ./zsh.nix
       ./gnome.nix
+      ./dev.nix
     ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "alexa";
   home.homeDirectory = "/home/alexa";
+
+  nixpkgs.config.allowUnfree = true;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
