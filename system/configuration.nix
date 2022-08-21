@@ -11,6 +11,7 @@
       ./common.nix
       ./gnome-desktop.nix
       ./wireguard.nix
+      ./zenbook.nix
       # Include home manager
       <home-manager/nixos>
     ];
