@@ -19,7 +19,7 @@
   home-manager.useGlobalPkgs = true;
 
   # Set nano as EDITOR
-  environment.variables = {
+  environment.sessionVariables = {
     EDITOR = "nano";
   };
 
