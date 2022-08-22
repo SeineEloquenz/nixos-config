@@ -18,7 +18,6 @@
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.appindicator
-    gnomeExtensions.vitals
     gnomeExtensions.espresso
     gnomeExtensions.gsconnect
     gnomeExtensions.x11-gestures

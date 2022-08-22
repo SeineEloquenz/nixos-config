@@ -64,6 +64,7 @@
 
   environment.systemPackages = with pkgs; [
     # base
+    lm_sensors
     nano
     htop
     curl
