@@ -8,10 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./common.nix
-      ./gnome-desktop.nix
-      ./wireguard.nix
-      ./zenbook.nix
+      # Import base modules
+      ../common.nix
+      ../gnome-desktop.nix
+      ../wireguard.nix
       # Include home manager
       <home-manager/nixos>
     ];
@@ -45,14 +45,12 @@
   #   enableSSHSupport = true;
   # };
 
-  # List services that you want to enable:
+  hardware.cpu.intel.updateMicrocode = true;
 
-  # Open ports in the firewall.
-  #networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  boot.kernelModules = [ "coretemp" ];
 
+  services.thermald.enable = true;
+  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

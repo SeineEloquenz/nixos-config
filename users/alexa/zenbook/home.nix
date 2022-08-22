@@ -3,9 +3,9 @@
 {
   imports =
     [ # Include zsh config
-      ./zsh.nix
-      ./gnome.nix
-      ./work.nix
+      ../zsh.nix
+      ../gnome.nix
+      ../work.nix
     ];
 
   # Home Manager needs a bit of information about you and the
