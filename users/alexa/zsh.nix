@@ -3,10 +3,20 @@
 {
   programs.zsh = {
     enable = true;
+
+    shellAliases = {
+      asystem = "sh ~/.dotfiles/apply-system.sh";
+      ausers = "sh ~/.dotfiles/apply-users.sh";
+      usystem = "sh ~/.dotfiles/update-system.sh";
+      uusers = "sh ~/.dotfiles/update-users.sh";
+      home-manager = "home-manager -f ~/.dotfiles/users/alexa/home.nix";
+    };
+
     initExtraFirst = ''
       [ ! -d "$HOME/.zsh/fsh/" ] && mkdir $HOME/.zsh/fsh/
       export FAST_WORK_DIR=$HOME/.zsh/fsh/;
     '';
+
     initExtraBeforeCompInit = ''
       # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
       # Initialization code that may require console input (password prompts, [y/n]
@@ -19,6 +29,7 @@
       setopt rcexpandparam                                            # Array expension with parameters
       setopt numericglobsort                                          # Sort filenames numerically when it makes sense
       setopt nobeep                                                   # No beep
+
       # key bindings
       bindkey '^[[7~' beginning-of-line                               # Home key
       bindkey '^[[H' beginning-of-line                                # Home key
@@ -48,6 +59,7 @@
       export LESS_TERMCAP_us=$'\E[01;36m'
       export LESS=-R
      '';
+
     plugins = [
       {
         name = "zsh-autosuggestions";
@@ -58,6 +70,7 @@
           sha256 = "0h52p2waggzfshvy1wvhj4hf06fmzd44bv6j18k3l9rcx6aixzn6";
         };
       }
+
       {
         name = "fast-syntax-highlighting";
         src = pkgs.fetchFromGitHub {
@@ -67,11 +80,13 @@
           sha256 = "0h7f27gz586xxw7cc0wyiv3bx0x3qih2wwh05ad85bh2h834ar8d";
         };
       }
+
       {
         name = "powerlevel10k";
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
+
       {
         name = "powerlevel10k-config";
         src = lib.cleanSource ./p10k-config;
