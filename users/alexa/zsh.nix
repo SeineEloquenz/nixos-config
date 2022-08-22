@@ -1,24 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  xdg.configFile."zsh/.p10k.zsh".source = ~/.dotfiles/files/.p10k.zsh;
-
   programs.zsh = {
     enable = true;
-    autocd = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    dotDir = ".config/zsh";
-    shellAliases = {
-      ip = "ip --color=auto";
-    };
-
-    history = {
-      ignoreSpace = true;
-      save = 100000;
-      size = 100000;
-    };
-
+    initExtraFirst = ''
+      [ ! -d "$HOME/.zsh/fsh/" ] && mkdir $HOME/.zsh/fsh/
+      export FAST_WORK_DIR=$HOME/.zsh/fsh/;
+    '';
     initExtraBeforeCompInit = ''
       # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
       # Initialization code that may require console input (password prompts, [y/n]
@@ -59,15 +47,36 @@
       export LESS_TERMCAP_ue=$'\E[0m'
       export LESS_TERMCAP_us=$'\E[01;36m'
       export LESS=-R
-    '';
-
-    zplug = {
-      enable = true;
-      plugins = [
-        { name = "zsh-users/zsh-autosuggestions"; }
-        { name = "zsh-users/zsh-syntax-highlighting"; }
-        { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
-      ];
-    };
+     '';
+    plugins = [
+      {
+        name = "zsh-autosuggestions";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-autosuggestions";
+          rev = "v0.6.4";
+          sha256 = "0h52p2waggzfshvy1wvhj4hf06fmzd44bv6j18k3l9rcx6aixzn6";
+        };
+      }
+      {
+        name = "fast-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "zdharma";
+          repo = "fast-syntax-highlighting";
+          rev = "v1.55";
+          sha256 = "0h7f27gz586xxw7cc0wyiv3bx0x3qih2wwh05ad85bh2h834ar8d";
+        };
+      }
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+      {
+        name = "powerlevel10k-config";
+        src = lib.cleanSource ./p10k-config;
+        file = "p10k.zsh";
+      }
+    ];
   };
 }
