@@ -18,6 +18,10 @@
 
   home-manager.useGlobalPkgs = true;
 
+  # Set nano as EDITOR
+  environment.variables = {
+    EDITOR = "nano";
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
