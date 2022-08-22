@@ -5,5 +5,6 @@
     vscodium-fhs      
     maven
     texlive.combined.scheme-full
+    xournalpp
   ];
 }

@@ -47,11 +47,14 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    # Themes
     layan-kde
     layan-gtk-theme
     tela-icon-theme
-    firefox
+    # Utils
     adoptopenjdk-bin
+    # Desktop apps
+    firefox
   ];
 
   # Fonts

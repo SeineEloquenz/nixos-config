@@ -17,13 +17,19 @@
   systemd.services."autovt@tty1".enable = false;
 
   environment.systemPackages = with pkgs; [
+    # Gnome Extensions
     gnomeExtensions.appindicator
     gnomeExtensions.espresso
     gnomeExtensions.gsconnect
     gnomeExtensions.ddterm
     gnomeExtensions.vitals
+    # Gnome Software
     gnome.gnome-terminal
     gnome.gnome-tweaks
+    gnome-firmware
+    # Third Party software
+    baobab
+    gparted
   ];
 
   services.udev.packages = with pkgs; [
@@ -34,9 +40,7 @@
   services.gnome.tracker-miners.enable = true;
   services.gnome.tracker.enable = false;
 
-
   environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
     gnome-tour
     gnome-console
   ]) ++ (with pkgs.gnome; [
