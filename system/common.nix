@@ -26,9 +26,7 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [
-    22
-  ];
+  networking.firewall.enable = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
