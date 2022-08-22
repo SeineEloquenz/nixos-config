@@ -49,7 +49,7 @@
     schildichat-desktop
     fragments
     libreoffice
-    ausweisapp2
+    AusweisApp2
     #jetbrains.webstorm
     #jetbrains.idea-ultimate
   ];
