@@ -36,11 +36,9 @@
     enable = true;
   };
 
-  services.nextcloud-client.enable = true;
-
   home.packages = with pkgs; [
-    pinentry
     neofetch
+    nextcloud-client
     polymc
     gimp
     inkscape

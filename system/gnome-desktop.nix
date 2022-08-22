@@ -21,6 +21,7 @@
     gnomeExtensions.espresso
     gnomeExtensions.gsconnect
     gnomeExtensions.ddterm
+    gnomeExtensions.vitals
     gnome.gnome-terminal
     gnome.gnome-tweaks
   ];

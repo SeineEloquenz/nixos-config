@@ -68,6 +68,7 @@
     git-lfs
     git-crypt
     gnupg
+    pinentry
     # networking
     dig
     tcpdump
