@@ -20,8 +20,6 @@
     gnomeExtensions.appindicator
     gnomeExtensions.espresso
     gnomeExtensions.gsconnect
-    gnomeExtensions.x11-gestures
-    gnomeExtensions.dash-to-dock
     gnomeExtensions.ddterm
     gnome.gnome-terminal
     gnome.gnome-tweaks
@@ -30,6 +28,11 @@
   services.udev.packages = with pkgs; [
     gnome.gnome-settings-daemon
   ];
+
+  # Disable indexing
+  services.gnome.tracker-miners.enable = true;
+  services.gnome.tracker.enable = false;
+
 
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
