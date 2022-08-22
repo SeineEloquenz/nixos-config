@@ -4,6 +4,7 @@
   imports =
     [ # Include zsh config
       ../zsh.nix
+      ../git.nix
       ../gnome.nix
       ../work.nix
     ];
