@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports =
+    [
+      ./printing.nix
+    ];
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -37,9 +41,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   services.xserver.excludePackages = with pkgs; [
     xterm
