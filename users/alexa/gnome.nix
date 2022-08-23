@@ -20,6 +20,10 @@
       ];
     };
 
+    "/org/gnome/shell/extensions/user-theme" = {
+      name = "Layan-dark";
+    };
+
     "/com/github/amezin/ddterm" = {
       window-monitor = "primary";
       window-size = 0.85;
