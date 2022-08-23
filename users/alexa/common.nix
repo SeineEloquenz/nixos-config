@@ -3,6 +3,7 @@
   imports =
     [ # Include zsh config
       ./zsh.nix
+      ./ssh.nix
       ./git.nix
     ];
 
