@@ -29,6 +29,9 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable ssh agent
+  programs.ssh.startAgent = true;
+
   # Open ports in the firewall.
   networking.firewall.enable = false;
 
