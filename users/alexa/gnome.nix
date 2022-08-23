@@ -23,6 +23,12 @@
       menu-accelerator-enabled = false;
       new-terminal-mode = "tab";
     };
+    "org/gnome/terminal/legacy/keybindings" = {
+      move-tab-left = "<Primary><Shift>Left";
+      move-tab-right = "<Primary><Shift>Right";
+      next-tab = "<Shift>Right";
+      prev-tab = "<Shift>Left";
+    };
     "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9" = {
       audible-bell = false;
       backspace-binding = "auto";
