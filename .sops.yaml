@@ -1,0 +1,7 @@
+keys:
+  - &alexa age1a0f9f4k4zt8nmd3syj234ywzwh9jat4asu9fx8spdccyj263m52sr2xlve
+creation_rules:
+  - path_regex: \.secrets/.+\.yaml$
+    key_groups:
+    - age:
+      - *alexa

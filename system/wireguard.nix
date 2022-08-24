@@ -20,7 +20,7 @@
       autostart = false;
       address = [ "192.168.179.3/24" ];
       dns = [ "192.168.178.101" ];
-      privateKeyFile = "/home/alexa/.dotfiles/.secrets/wg/private";
+      privateKeyFile = "/run/secrets/wg/mcg";
       postUp = [ "ip r a 192.168.178.0/24 via 192.168.179.1 " "ip li set dev wg0" "iptables -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu" ];
       postDown = [ "ip r d 192.168.178.0/24 via 192.168.179.1" "iptables -D FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu" ];
       peers = [
