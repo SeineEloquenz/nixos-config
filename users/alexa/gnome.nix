@@ -76,6 +76,7 @@
 
     "org/gnome/desktop/wm/keybindings" = {
       close = [ "<Super>q" ];
+      panel-run-dialog = [ "<Super>d" ];
     };
 
     "org/gnome/shell/tweaks" = { show-extensions-notice = false; };
