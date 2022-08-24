@@ -20,4 +20,15 @@
     owner = "root";
     path = "/etc/NetworkManager/system-connections/MondcarionGroup.nmconnection";
   };
+
+  sops.secrets."wifi/MondcarionMOBILE" = {
+    owner = "root";
+    path = "/etc/NetworkManager/system-connections/MondcarionMOBILE.nmconnection";
+  };
+
+  sops.secrets."wifi/rednose" = {
+    owner = "root";
+    path = "/etc/NetworkManager/system-connections/rednose.nmconnection";
+  };
+
 }
