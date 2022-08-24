@@ -5,11 +5,12 @@
     enable = true;
 
     shellAliases = {
-      asystem = "sh ~/.dotfiles/apply-system.sh";
-      ausers = "sh ~/.dotfiles/apply-users.sh";
-      usystem = "sh ~/.dotfiles/update-system.sh";
-      uusers = "sh ~/.dotfiles/update-users.sh";
+      asystem = "sh ~/.dotfiles/scripts/apply-system.sh";
+      ausers = "sh ~/.dotfiles/scripts/apply-users.sh";
+      usystem = "sh ~/.dotfiles/scripts/update-system.sh";
+      uusers = "sh ~/.dotfiles/scripts/update-users.sh";
       home-manager = "home-manager -f ~/.dotfiles/users/alexa/home.nix";
+      dump-wifi = "sh ~/.dotfiles/scripts/dump-wifi.sh";
       sops-edit-secrets = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/secrets.yaml\"";
       sops-edit-wifi = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/wifi.yaml\"";
     };
