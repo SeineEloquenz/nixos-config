@@ -70,7 +70,7 @@
     };
 
     "org/gnome/desktop/wm/preferences" = {
-      button-aylout = "appmenu:minimize,maximize,close";
+      button-layout = "appmenu:minimize,maximize,close";
       titlebar-font = "MontSerrat Semi-Bold 11";
     };
 
