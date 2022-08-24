@@ -10,7 +10,8 @@
       usystem = "sh ~/.dotfiles/update-system.sh";
       uusers = "sh ~/.dotfiles/update-users.sh";
       home-manager = "home-manager -f ~/.dotfiles/users/alexa/home.nix";
-      sops-edit = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/secrets.yaml\"";
+      sops-edit-secrets = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/secrets.yaml\"";
+      sops-edit-wifi = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/wifi.yaml\"";
     };
 
     initExtraFirst = ''
