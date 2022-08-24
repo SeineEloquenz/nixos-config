@@ -24,7 +24,7 @@
       name = "Layan-dark";
     };
 
-    "/com/github/amezin/ddterm" = {
+    "com/github/amezin/ddterm" = {
       window-monitor = "primary";
       window-size = 0.85;
 
