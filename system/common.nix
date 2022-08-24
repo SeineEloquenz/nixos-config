@@ -78,8 +78,6 @@
     wget
     git
     git-lfs
-    git-crypt
-    gnupg
     pinentry
     # networking
     dig
@@ -87,7 +85,6 @@
     iputils
     # tools
     imagemagick
-    
   ];
 
 }

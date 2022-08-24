@@ -15,14 +15,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.gpg = {
-    enable = true;
-  };
-
-  services.gpg-agent = {
-    enable = true;
-  };
-
   home.packages = with pkgs; [
     neofetch
     nextcloud-client
