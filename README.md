@@ -1,3 +1,8 @@
+# General
+Add the sops channel:
+```sudo nix-channel --add https://github.com/Mic92/sops-nix/archive/master.tar.gz sops-nix```
+```sudo nix-channel --update```
+
 # Setup an existing machine
 1. Clone the repository into ```~/.dotfiles```
 2. Create a symlink ```system/configuration.nix``` pointing to ```system/<machine>/configuration.nix```

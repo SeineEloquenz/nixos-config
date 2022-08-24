@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    "<sops-nix>/modules/sops"
+  ];
+
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
   nix = {
     settings.auto-optimise-store = true;
