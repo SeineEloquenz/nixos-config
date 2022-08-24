@@ -20,7 +20,7 @@
       ];
     };
 
-    "/org/gnome/shell/extensions/user-theme" = {
+    "org/gnome/shell/extensions/user-theme" = {
       name = "Layan-dark";
     };
 
