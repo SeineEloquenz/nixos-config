@@ -6,8 +6,18 @@
   sops.defaultSopsFile = ../.secrets/secrets.yaml;
   # This is using an age key that is expected to already be in the filesystem
   sops.age.keyFile = "/root/keys.txt";
+
   # This is the actual specification of the secrets.
+
+  # WireGuard secrets
   sops.secrets."wg/mcg" = {
     owner = "root";
+  };
+
+  # Wifi networks
+
+  sops.secrets."wifi/MondcarionGroup" = {
+    owner = "root";
+    path = "/etc/NetworkManager/system-connections/MondcarionGroup.nmconnection";
   };
 }
