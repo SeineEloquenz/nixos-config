@@ -1,8 +1,9 @@
 # General
 Add the sops channel:
-```sudo nix-channel --add https://github.com/Mic92/sops-nix/archive/master.tar.gz sops-nix```
-
-```sudo nix-channel --update```
+```
+sudo nix-channel --add https://github.com/Mic92/sops-nix/archive/master.tar.gz sops-nix
+sudo nix-channel --update
+```
 
 Get sops key from pw manager and put it in ```/root/keys.txt```
 
