@@ -17,6 +17,7 @@
   
   networking.wg-quick.interfaces = {
     wg0 = {
+      autostart = false;
       address = [ "192.168.179.3/24" ];
       dns = [ "192.168.178.101" ];
       privateKeyFile = "/home/alexa/.dotfiles/.secrets/wg/private";
