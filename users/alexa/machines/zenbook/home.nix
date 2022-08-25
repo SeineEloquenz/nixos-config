@@ -3,9 +3,9 @@
 {
   imports =
     [ # Include zsh config
-      ../common.nix
-      ../gnome.nix
-      ../work.nix
+      ../../common.nix
+      ../../gnome.nix
+      ../../work.nix
     ];
 
   # This value determines the Home Manager release that your

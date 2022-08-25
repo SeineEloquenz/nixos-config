@@ -9,9 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # Import base modules
-      ../common.nix
-      ../gnome-desktop.nix
-      ../wireguard.nix
+      ../../common.nix
+      ../../gnome-desktop.nix
+      ../../wireguard.nix
       # Include home manager
       <home-manager/nixos>
     ];
