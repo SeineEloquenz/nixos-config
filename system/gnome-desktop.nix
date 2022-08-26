@@ -38,7 +38,7 @@
   ];
 
   # Disable indexing
-  services.gnome.tracker-miners.enable = true;
+  services.gnome.tracker-miners.enable = false;
   services.gnome.tracker.enable = false;
 
   environment.gnome.excludePackages = (with pkgs; [
