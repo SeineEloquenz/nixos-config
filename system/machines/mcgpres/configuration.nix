@@ -8,7 +8,7 @@
       # Import base modules
       ../../common.nix
       ../../podman.nix
-#      ../../nvidia.nix
+      ../../nvidia.nix
       ../../gnome-desktop.nix
       ../../gaming.nix
       # Include home manager
