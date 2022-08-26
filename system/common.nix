@@ -28,6 +28,9 @@
     EDITOR = "nano";
   };
 
+  # Set zsh as shell
+  environment.shells = [ pkgs.zsh ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
