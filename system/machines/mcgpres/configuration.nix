@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./drives.nix
       # Import base modules
       ../../common.nix
 #      ../../nvidia.nix
