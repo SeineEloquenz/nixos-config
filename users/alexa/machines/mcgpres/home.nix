@@ -5,6 +5,7 @@
     [ # Include zsh config
       ../../common.nix
       ../../gnome.nix
+      ../../firefox.nix
       ../../work.nix
     ];
 
