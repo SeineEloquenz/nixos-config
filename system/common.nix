@@ -88,6 +88,8 @@
     iputils
     # tools
     imagemagick
+    ncdu
+    tldr
   ];
 
 }
