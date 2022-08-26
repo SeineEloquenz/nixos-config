@@ -55,6 +55,9 @@
   # Make zsh default shell
   users.defaultUserShell = pkgs.zsh;
 
+  # Firmware
+  services.fwupd.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alexa = {
     isNormalUser = true;
