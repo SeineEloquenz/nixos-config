@@ -64,7 +64,7 @@
     layan-gtk-theme
     tela-icon-theme
     # Utils
-    adoptopenjdk-bin
+    jdk
     # Desktop apps
     firefox
   ];
