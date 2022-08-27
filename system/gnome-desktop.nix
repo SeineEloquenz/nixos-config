@@ -23,7 +23,6 @@
     gnomeExtensions.gsconnect
     gnomeExtensions.ddterm
     gnomeExtensions.vitals
-    gnomeExtensions.compiz-windows-effect
     # Gnome Software
     gnome.gnome-terminal
     gnome.gnome-tweaks
