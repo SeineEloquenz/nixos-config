@@ -89,6 +89,10 @@
     "org/gtk/settings/file-chooser" = {
       sort-directories-first = true;
     };
+
+    "org/gnome/GWeather4" = {
+      temperature-unit = "centigrade";
+    };
   };
   
 }
