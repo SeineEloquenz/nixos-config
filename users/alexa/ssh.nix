@@ -25,6 +25,11 @@
         identityFile = "~/.ssh/keys/scc";
        };
 
+       "github.com" = {
+         user = "git";
+         identityFile = "~/.ssh/keys/id_rsa";
+       };
+
       "gaymops.mondcarion.group" = {
         identityFile = "~/.ssh/id_ecdsa";
       };
