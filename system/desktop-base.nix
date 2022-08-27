@@ -5,6 +5,7 @@
     [
       ./printing.nix
       ./desktop-networking.nix
+      ./ssh.nix
     ];
 
   # XDG Environment variables

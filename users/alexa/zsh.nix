@@ -13,6 +13,7 @@
       dump-wifi = "sh ~/.dotfiles/scripts/dump-wifi.sh";
       sops-edit-secrets = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/secrets.yaml\"";
       sops-edit-wifi = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/wifi.yaml\"";
+      sops-edit-ssh = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/ssh.yaml\"";
     };
 
     initExtraFirst = ''
