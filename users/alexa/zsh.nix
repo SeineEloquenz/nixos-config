@@ -11,9 +11,6 @@
       uusers = "sh ~/.dotfiles/scripts/update-users.sh";
       home-manager = "home-manager -f ~/.dotfiles/users/alexa/home.nix";
       dump-wifi = "sh ~/.dotfiles/scripts/dump-wifi.sh";
-      sops-edit-secrets = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/secrets.yaml\"";
-      sops-edit-wifi = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/wifi.yaml\"";
-      sops-edit-ssh = "nix-shell -p sops --run \"sops ~/.dotfiles/.secrets/ssh.yaml\"";
     };
 
     initExtraFirst = ''
