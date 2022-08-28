@@ -12,6 +12,7 @@
       ../../common.nix
       ../../gnome-desktop.nix
       ../../wireguard.nix
+      ../../disable-tracker.nix
       # Include home manager
       <home-manager/nixos>
     ];

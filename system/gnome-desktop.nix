@@ -36,10 +36,6 @@
     gnome.gnome-settings-daemon
   ];
 
-  # Disable indexing
-  services.gnome.tracker-miners.enable = false;
-  services.gnome.tracker.enable = false;
-
   environment.gnome.excludePackages = (with pkgs; [
     gnome-tour
     gnome-console
