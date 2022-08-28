@@ -53,42 +53,42 @@
 
       "dns.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/guests";
       };
 
       "postgres.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/guests";
       };
 
       "cloud.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/geusts";
       };
 
       "fancontrol-0.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/geusts";
       };
 
       "navidrome.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/guests";
       };
 
       "mumble.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/guests";
       };
 
       "matrix.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/guests";
       };
 
       "tts.internal.mondcarion.group" = {
         user = "root";
-        identityFile = "~/.ssh/keys/rack-0";
+        identityFile = "~/.ssh/keys/guests";
       };
     };
   };
