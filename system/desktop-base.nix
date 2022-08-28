@@ -6,6 +6,7 @@
       ./printing.nix
       ./desktop-networking.nix
       ./ssh.nix
+      ./audio.nix
     ];
 
   # XDG Environment variables
