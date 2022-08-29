@@ -58,7 +58,6 @@
             general_settings = {
               "browser.aboutConfig.showWarning" = false;
               "browser.shell.checkDefaultBrowser" = false;
-              "browser.toolbars.bookmarks.visibility" = "newtab";
               "browser.urlbar.showSearchSuggestionsFirst" = false;
               "extensions.htmlaboutaddons.inline-options.enabled" = false;
               "extensions.htmlaboutaddons.recommendations.enabled" = false;
