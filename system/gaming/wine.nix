@@ -1,8 +1,7 @@
 { config, pkgs, ... }:{
 
   environment.systemPackages = with pkgs; [
-    wine-staging
-    winePackages.stagingFull
+    wineWowPackages.stagingFull
     winetricks
     mono
   ];
