@@ -8,6 +8,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  programs.xwayland.enable = true;
 
   # Enable gnome keyring in pam
   security.pam.services.gdm.enableGnomeKeyring = true;
