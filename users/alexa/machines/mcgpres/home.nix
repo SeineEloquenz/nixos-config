@@ -4,6 +4,7 @@
   imports =
     [ # Include zsh config
       ../../common.nix
+      ./audio.nix
       ../../gnome.nix
       ../../firefox.nix
       ../../work.nix
