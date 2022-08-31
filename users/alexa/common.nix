@@ -26,5 +26,6 @@
     fragments
     libreoffice
     AusweisApp2
+    tor-browser-bundle-bin
   ];
 }
