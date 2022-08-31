@@ -4,7 +4,7 @@
     spdif = {
       matches = {
         {
-          { "node.name", "equals", "alsa_output.pci-0000_00_1f.3.iec958-stereo" },
+          { "node.nick", "equals", "ALC892 Digital" },
         },
       },
       apply_properties = {
@@ -15,7 +15,8 @@
     camera = {
       matches = {
         {
-          { "node.name", "equals", "alsa_input.usb-HD_Web_Camera_HD_Web_Camera_Ucamera001-02.mono-fallback" },
+          { "node.nick", "equals", "HD Web Camera" },
+          { "media.class", "equals", "Audio/Source" },
         },
       },
       apply_properties = {
