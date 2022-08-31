@@ -65,6 +65,7 @@
     layan-gtk-theme
     tela-icon-theme
     # Utils
+    scanmem
     jdk
     # Desktop apps
     firefox
