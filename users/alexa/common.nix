@@ -21,7 +21,6 @@
     polymc
     gimp
     inkscape
-    vlc
     sublime-music
     schildichat-desktop
     fragments
