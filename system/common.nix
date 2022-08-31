@@ -84,7 +84,7 @@
     wget
     git
     git-lfs
-    pinentry
+    unrar
     # networking
     dig
     tcpdump
