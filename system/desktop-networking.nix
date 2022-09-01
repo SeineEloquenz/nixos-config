@@ -22,4 +22,10 @@
     path = "/etc/NetworkManager/system-connections/rednose.nmconnection";
     sopsFile = ../.secrets/wifi.yaml;
   };
+
+  sops.secrets."wifi/Karl7" = {
+    owner = "root";
+    path = "/etc/NetworkManager/system-connections/Karl7.nmconnection";
+    sopsFile = ../.secrets/wifi.yaml;
+  };
 }
