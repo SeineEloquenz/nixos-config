@@ -20,6 +20,10 @@
       ];
     };
 
+    "org/gnome/shell/app-switcher" = {
+      current-workspace-only = true;
+    };
+
     "org/gnome/shell/extensions/user-theme" = {
       name = "Layan-dark";
     };
