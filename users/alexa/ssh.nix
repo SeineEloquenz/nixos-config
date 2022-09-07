@@ -38,6 +38,11 @@
         identityFile = "~/.ssh/id_ecdsa";
       };
 
+      "genie.internal.mondcarion.group" = {
+        user = "pi";
+        identityFile = "~/.ssh/id_ecdsa";
+      };
+
       "rack-0.pve.internal.mondcarion.group" = {
         user = "root";
         identityFile = "~/.ssh/keys/rack-0";
