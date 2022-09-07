@@ -30,7 +30,7 @@
 
     "com/github/amezin/ddterm" = {
       window-monitor = "primary";
-      window-size = 0.85;
+      window-size = 1.0;
 
       # Hotkeys
       ddterm-toggle-hotkey = [ "<Super>Return" ];
@@ -39,6 +39,8 @@
       shortcut-move-tab-next = [ "<Primary><Shift>Right" ];
       shortcut-move-tab-prev = [ "<Primary><Shift>Left" ];
       shortcut-win-new-tab = [ "<Primary><Shift>t" ];
+      shortcut-window-size-dec = [ "" ];
+      shortcut-window-size-inc = [ "" ];
     };
 
     "org/gnome/terminal/legacy" = {
