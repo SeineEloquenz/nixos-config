@@ -7,5 +7,7 @@
     maven
     texlive.combined.scheme-full
     xournalpp
+    # Nix stuff
+    nix-prefetch-git
   ];
 }
