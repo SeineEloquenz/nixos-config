@@ -85,6 +85,7 @@
     git
     git-lfs
     unrar
+    unzip
     # networking
     dig
     tcpdump
