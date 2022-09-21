@@ -3,6 +3,7 @@
 {
   imports = [
     ./sops.nix
+    ./systemd.nix
   ];
 
 
