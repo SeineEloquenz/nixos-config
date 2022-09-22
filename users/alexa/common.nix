@@ -18,13 +18,11 @@
   home.packages = with pkgs; [
     neofetch
     nextcloud-client
-    polymc
     gimp
     inkscape
     sublime-music
     schildichat-desktop
     fragments
-    libreoffice
     AusweisApp2
     tor-browser-bundle-bin
   ];

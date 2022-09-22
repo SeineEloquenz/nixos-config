@@ -7,7 +7,9 @@
       ./audio.nix
       ../../gnome.nix
       ../../firefox.nix
-      ../../work.nix
+      ../../office.nix
+      ../../dev.nix
+      ../../art.nix
     ];
 
   # This value determines the Home Manager release that your

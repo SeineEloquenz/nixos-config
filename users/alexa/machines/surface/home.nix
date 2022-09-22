@@ -5,9 +5,8 @@
     [ # Include zsh config
       ../../common.nix
       ../../gnome.nix
+      ../../firefox.nix
       ../../office.nix
-      ../../dev.nix
-      ../../art.nix
     ];
 
   # This value determines the Home Manager release that your
