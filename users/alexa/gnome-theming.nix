@@ -1,13 +1,20 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
+with lib;
 
-{
+let
+  vars = {
+    QT_STYLE_OVERRIDE = "kvantum";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+  };
+in {
   qt.enable = true;
   qt.style = {
     name = "kvantum";
   };
-  home.sessionVariables = {
-    QT_STYLE_OVERRIDE = "kvantum";
-  };
+
+  home.sessionVariables = vars;
+  systemd.user.sessionVariables = vars;
+
   xdg.configFile."Kvantum/kvantum.kvconfig".source = ~/.dotfiles/files/kvantum.kvconfig;
 
   gtk.enable = true;
