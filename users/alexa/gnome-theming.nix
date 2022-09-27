@@ -5,6 +5,17 @@ let
   vars = {
     QT_STYLE_OVERRIDE = "kvantum";
   };
+  layanWallpaper = ../../files/wallpaper.png;
+  layanEnv = pkgs.buildEnv {
+    name = "layanEnv";
+    paths = [
+      pkgs.layan-gtk-theme
+      (pkgs.runCommand "wallpaper" {} ''
+        mkdir -p $out/share/themes/Layan-Dark/gnome-shell/assets
+        ln -s ${layanWallpaper} $out/share/themes/Layan-Dark/gnome-shell/assets/wallpaper.png
+      '')
+    ];
+  };
 in {
   qt.enable = true;
   qt.style = {
@@ -30,11 +41,11 @@ in {
 
   gtk.theme = {
     name = "Layan-dark";
-    package = pkgs.layan-gtk-theme;
+    package = layanEnv;
   };
-  xdg.configFile."gtk-4.0/gtk.css".source = "${pkgs.layan-gtk-theme}/share/themes/Layan-dark/gtk-4.0/gtk.css";
+  xdg.configFile."gtk-4.0/gtk.css".source = "${layanEnv}/share/themes/Layan-dark/gtk-4.0/gtk.css";
   xdg.configFile."gtk-4.0/assets" = {
-    source = "${pkgs.layan-gtk-theme}/share/themes/Layan-dark/gtk-4.0/assets";
+    source = "${layanEnv}/share/themes/Layan-dark/gtk-4.0/assets";
     recursive = true;
   };
 
