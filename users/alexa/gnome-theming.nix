@@ -12,7 +12,7 @@ let
       pkgs.layan-gtk-theme
       (pkgs.runCommand "wallpaper" {} ''
         mkdir -p $out/share/themes/Layan-Dark/gnome-shell/assets
-        ln -s ${layanWallpaper} $out/share/themes/Layan-Dark/gnome-shell/assets/wallpaper.png
+        ln -s ${layanWallpaper} $out/share/themes/Layan-Dark/gnome-shell/assets/background.png
       '')
     ];
   };
