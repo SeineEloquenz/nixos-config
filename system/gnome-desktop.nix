@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   imports = [
@@ -17,6 +17,11 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  environment.variables = lib.mkForce {
+    QT_STYLE_OVERRIDE = "kvantum";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+  };
+
   environment.systemPackages = with pkgs; [
     # Gnome Extensions
     gnomeExtensions.appindicator
@@ -31,6 +36,8 @@
     # Third Party software
     baobab
     gparted
+    # For QT Theming
+    qt5ct
   ];
 
   services.udev.packages = with pkgs; [

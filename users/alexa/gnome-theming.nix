@@ -4,7 +4,6 @@ with lib;
 let
   vars = {
     QT_STYLE_OVERRIDE = "kvantum";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 in {
   qt.enable = true;
@@ -14,9 +13,6 @@ in {
 
   home.sessionVariables = vars;
   systemd.user.sessionVariables = vars;
-  # Workaround to make variables loaded by DE.
-  # Creates .xprofile from variables which is sourced by DE
-  xsession.enable = true;
 
   xdg.configFile."Kvantum/kvantum.kvconfig".source = ~/.dotfiles/files/kvantum.kvconfig;
 
@@ -48,7 +44,6 @@ in {
   };
 
   home.packages = with pkgs; [
-    qt5ct
     libsForQt5.qtstyleplugin-kvantum
   ];
 
