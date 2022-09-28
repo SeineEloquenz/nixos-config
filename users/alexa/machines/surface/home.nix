@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include zsh config
+  imports = [
+      ./scaling.nix
       ../../common.nix
       ../../gnome.nix
       ../../firefox.nix
