@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       # Import base modules
       ../../common.nix
+      ../../iio.nix
       ../../gnome-desktop.nix
       ../../wireguard.nix
       ../../disable-tracker.nix

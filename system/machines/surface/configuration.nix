@@ -8,10 +8,9 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./wifi.nix
-      ./ecrypt.nix
       # Import base modules
       ../../common.nix
+      ../../iio.nix
       ../../gnome-desktop.nix
       ../../wireguard.nix
       ../../disable-tracker.nix
@@ -30,8 +29,8 @@
   };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".device = "/dev/disk/by-uuid/b88b46e4-d105-4a66-ab9c-25ff608d16b4";
-  boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".device = "/dev/disk/by-uuid/4e7c8ffd-96e3-4248-bf00-f02b6152b8b3";
+  boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".keyFile = "/crypto_keyfile.bin";
 
   networking.hostName = "surface"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
