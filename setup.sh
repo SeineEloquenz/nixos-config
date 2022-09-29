@@ -28,11 +28,18 @@ fi
 
 # Ensures sops is set up correctly
 read -p "Paste the sops key content into the upcoming editor. Understood? (y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-sudo nano /root/keys.txt
-sudo chmod 600 /root/keys.txt
-read -p "Sops key pasted correctly? (y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+usersops=~/.config/sops/age
+rootsops=/root
+mkdir -p $usersops
+nano $usersops/keys.txt
+chmod 600 $usersops/keys.txt
+sudo cp $usersops/keys.txt $rootsops/keys.txt
+sudo chmod 600 $rootsops/keys.txt
 
 echo "Applying system configuration"
+# Workaround to ensure correct ownership on directory
+mkdir -p ~/.ssh/keys
+# Actually apply
 sh ~/.dotfiles/scripts/apply-system.sh
 
 echo "Installing home-manager"
