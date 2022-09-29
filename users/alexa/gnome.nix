@@ -69,6 +69,7 @@
     };
 
     "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
       font-antialiasing = "grayscale";
       font-hinting = "full";
       document-font-name = "Montserrat Semi-Bold 10";
