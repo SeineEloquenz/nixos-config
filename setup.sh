@@ -42,10 +42,4 @@ mkdir -p ~/.ssh/keys
 # Actually apply
 sh ~/.dotfiles/scripts/apply-system.sh
 
-echo "Installing home-manager"
-nix-shell '<home-manager>' -A install
-
-echo "Applying user configuration"
-sh ~/.dotfiles/scripts/apply-users.sh
-
 echo "System set up, you might need to reboot for everything to work correctly"
