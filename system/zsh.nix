@@ -8,7 +8,6 @@
       shellAliases = {
         asystem = "sh ~/.dotfiles/scripts/apply-system.sh";
         usystem = "sh ~/.dotfiles/scripts/update-system.sh";
-        home-manager = "home-manager -f ~/.dotfiles/users/alexa/home.nix";
         dump-wifi = "sh ~/.dotfiles/scripts/dump-wifi.sh";
       };
 
