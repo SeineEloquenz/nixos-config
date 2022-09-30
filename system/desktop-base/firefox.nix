@@ -1,5 +1,7 @@
 { config, pkgs, ... }:{
 
+  environment.systemPackages = [ pkgs.firefox ];
+
   home-manager.users.alexa = {  
     programs.firefox = {
       enable = true;
