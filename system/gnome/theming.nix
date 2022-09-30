@@ -23,12 +23,12 @@ in {
       name = "kvantum";
     };
 
-    home.file.".face".source = ~/.dotfiles/files/obiwan.jpg;
+    home.file.".face".source = /home/alexa/.dotfiles/files/obiwan.jpg;
 
     home.sessionVariables = vars;
     systemd.user.sessionVariables = vars;
 
-    xdg.configFile."Kvantum/kvantum.kvconfig".source = ~/.dotfiles/files/kvantum.kvconfig;
+    xdg.configFile."Kvantum/kvantum.kvconfig".source = /home/alexa/.dotfiles/files/kvantum.kvconfig;
 
     gtk.enable = true;
 

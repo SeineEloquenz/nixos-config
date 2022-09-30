@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../desktop-base.nix
+    ../desktop-base
     ./dconf.nix
     ./theming.nix
   ];
