@@ -1,5 +1,5 @@
 { config, pkgs, ... }:{
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     jetbrains.webstorm
     jetbrains.idea-ultimate
     vscodium-fhs

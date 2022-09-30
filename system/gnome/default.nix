@@ -2,7 +2,9 @@
 
 {
   imports = [
-    ./desktop-base.nix
+    ../desktop-base.nix
+    ./dconf.nix
+    ./theming.nix
   ];
 
   # Enable the GNOME Desktop Environment.

@@ -4,6 +4,11 @@
   imports = [
     ./sops.nix
     ./systemd.nix
+    ./ssh.nix
+    ./zsh.nix
+    ./git.nix
+    # Home Manager
+    <home-manager/nixos>
   ];
 
 
@@ -72,6 +77,16 @@
     openssh.authorizedKeys.keys = [
       "ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAG2dlvxsK8sFLZaqupo3mqEU2llLMkep87cwW9Zu77lBRdPI7X/UOWV5rFToOD/gprWeNNM2Y/a4GCI1jc1X3QYhgHwkf+3odCYYy+0YT/pxjwl3XTKb05bJlOaK07j3j/XZoDMEgfgb+Ma7gQJOqL9qBA9mg6kYNOXSTkz4Wq2KgOjcQ== alexa@mcg-pres"
     ];
+  };
+
+  home-manager.users.alexa = {
+    home.username = "alexa";
+    home.homeDirectory = "/home/alexa";
+
+    nixpkgs.config.allowUnfree = true;
+
+    # Let Home Manager install and manage itself.
+    programs.home-manager.enable = true;
   };
 
   # Common packages

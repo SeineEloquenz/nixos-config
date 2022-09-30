@@ -5,14 +5,16 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./drives.nix
+      ./audio.nix
       # Import base modules
       ../../common.nix
       ../../docker.nix
       ../../nvidia.nix
-      ../../gnome-desktop.nix
-      ../../gaming.nix
-      # Include home manager
-      <home-manager/nixos>
+      ../../gnome
+      ../../gaming
+      ../../apps/office.nix
+      ../../apps/dev.nix
+      ../../apps/art.nix
     ];
 
   # Bootloader.

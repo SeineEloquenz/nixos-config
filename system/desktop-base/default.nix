@@ -4,9 +4,9 @@
   imports =
     [
       ./printing.nix
-      ./desktop-networking.nix
-      ./ssh.nix
+      ./networking.nix
       ./audio.nix
+      ./firefox.nix
     ];
 
   # XDG Environment variables
@@ -68,7 +68,15 @@
     scanmem
     jdk
     # Desktop apps
-    firefox
+    neofetch
+    nextcloud-client
+    gimp
+    inkscape
+    sublime-music
+    schildichat-desktop
+    fragments
+    AusweisApp2
+    tor-browser-bundle-bin
   ];
 
   # Fonts

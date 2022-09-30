@@ -1,9 +1,10 @@
 { config, pkgs, ... }:{
-  
-  programs.firefox = {
-    enable = true;
 
-    profiles = {
+  home-manager.users.alexa = {  
+    programs.firefox = {
+      enable = true;
+
+      profiles = {
         personal = {
           id = 0;
           name = "default";
@@ -80,4 +81,5 @@
         };
       };
     };
+  };
 }

@@ -11,11 +11,13 @@
       # Import base modules
       ../../common.nix
       ../../iio.nix
-      ../../gnome-desktop.nix
+      ../../gnome
       ../../wireguard.nix
-      ../../disable-tracker.nix
-      # Include home manager
-      <home-manager/nixos>
+      ../../gnome/disable-tracker.nix
+      # Apps
+      ../../apps/office.nix
+      ../../apps/dev.nix
+      ../../apps/art.nix
     ];
 
   # Bootloader.
