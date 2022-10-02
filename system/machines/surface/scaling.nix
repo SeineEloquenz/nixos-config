@@ -1,7 +1,9 @@
 { config, lib, ... }:{
-  dconf.settings = {
-    "org/gnome/mutter" = {
-      experimental-features = [ "scale-monitor-framebuffer" ];
+  home-manager.users.alexa = {
+    dconf.settings = {
+      "org/gnome/mutter" = {
+        experimental-features = [ "scale-monitor-framebuffer" ];
+      };
     };
   };
 }

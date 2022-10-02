@@ -13,9 +13,9 @@
       # Import base modules
       ../../common.nix
       ../../iio.nix
-      ../../gnome-desktop.nix
+      ../../gnome
+      ../../gnome/disable-tracker.nix
       ../../wireguard.nix
-      ../../disable-tracker.nix
       ../../apps/office.nix
     ];
 
