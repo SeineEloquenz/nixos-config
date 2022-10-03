@@ -9,6 +9,8 @@
     ./git.nix
     # Home Manager
     <home-manager/nixos>
+    # Modules
+    ../modules/wireless.nix
   ];
 
 

@@ -4,28 +4,10 @@
   networking.networkmanager.enable = true;
 
   # Secrets
-
-  sops.secrets."wifi/MondcarionGroup" = {
-    owner = "root";
-    path = "/etc/NetworkManager/system-connections/MondcarionGroup.nmconnection";
-    sopsFile = ../../.secrets/wifi.yaml;
-  };
-
-  sops.secrets."wifi/MondcarionMOBILE" = {
-    owner = "root";
-    path = "/etc/NetworkManager/system-connections/MondcarionMOBILE.nmconnection";
-    sopsFile = ../../.secrets/wifi.yaml;
-  };
-
-  sops.secrets."wifi/rednose" = {
-    owner = "root";
-    path = "/etc/NetworkManager/system-connections/rednose.nmconnection";
-    sopsFile = ../../.secrets/wifi.yaml;
-  };
-
-  sops.secrets."wifi/Karl7" = {
-    owner = "root";
-    path = "/etc/NetworkManager/system-connections/Karl7.nmconnection";
-    sopsFile = ../../.secrets/wifi.yaml;
-  };
+  networking.networkmanager.networks = [
+    "MondcarionGroup"
+    "MondcarionMOBILE"
+    "rednose"
+    "Karl7"
+  ];
 }
