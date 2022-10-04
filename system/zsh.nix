@@ -41,6 +41,7 @@
         bindkey '^[[5~' history-beginning-search-backward               # Page up key
         bindkey '^[[6~' history-beginning-search-forward                # Page down key
         bindkey '^H' backward-kill-word 
+        bindkey '5~' kill-word
 
         # Navigate words with ctrl+arrow keys
         bindkey '^[Oc' forward-word                                     #
