@@ -11,6 +11,7 @@
     <home-manager/nixos>
     # Modules
     ../modules/wireless.nix
+    ../modules/ssh-keys.nix
   ];
 
 
