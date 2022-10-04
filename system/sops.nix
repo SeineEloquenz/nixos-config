@@ -11,9 +11,4 @@
   sops.age.keyFile = "/root/keys.txt";
 
   # This is the actual specification of the secrets.
-
-  # WireGuard secrets
-  sops.secrets."wg/mcg" = {
-    owner = "root";
-  };
 }

@@ -1,6 +1,11 @@
 { config, pkgs, lib, ... }:
 
 {
+
+  sops.secrets."wg/mcg" = {
+    owner = "root";
+  };
+
   networking.firewall = {
     # if packets are still dropped they show up in dmesg
     logReversePathDrops = true;
