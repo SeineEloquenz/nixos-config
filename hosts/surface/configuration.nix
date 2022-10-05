@@ -33,20 +33,7 @@
   boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".device = "/dev/disk/by-uuid/4e7c8ffd-96e3-4248-bf00-f02b6152b8b3";
   boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "surface"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  networking.hostName = "surface";
 
   hardware.cpu.intel.updateMicrocode = true;
 
