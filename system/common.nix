@@ -7,9 +7,6 @@
     ./ssh.nix
     ./zsh.nix
     ./git.nix
-    # Modules
-    ../modules/wireless.nix
-    ../modules/ssh-keys.nix
   ];
 
 

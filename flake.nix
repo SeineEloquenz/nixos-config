@@ -29,6 +29,8 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
         }
+        ./modules/ssh-keys.nix
+        ./modules/wireless.nix
       ];
     in {
       nixosConfigurations = {
