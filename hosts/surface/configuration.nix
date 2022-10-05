@@ -11,12 +11,12 @@
       ./drives.nix
       ./scaling.nix
       # Import base modules
-      ../../common.nix
-      ../../iio.nix
-      ../../gnome
-      ../../gnome/disable-tracker.nix
-      ../../wireguard.nix
-      ../../apps/office.nix
+      ../../system/common.nix
+      ../../system/iio.nix
+      ../../system/gnome
+      ../../system/gnome/disable-tracker.nix
+      ../../system/wireguard.nix
+      ../../system/apps/office.nix
     ];
 
   # Bootloader.

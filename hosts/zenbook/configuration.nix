@@ -1,20 +1,23 @@
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+
 { config, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./drives.nix
-      ./audio.nix
       # Import base modules
-      ../../common.nix
-      ../../docker.nix
-      ../../nvidia.nix
-      ../../gnome
-      ../../gaming
-      ../../apps/office.nix
-      ../../apps/dev.nix
-      ../../apps/art.nix
+      ../../system/common.nix
+      ../../system/iio.nix
+      ../../system/gnome
+      ../../system/wireguard.nix
+      ../../system/gnome/disable-tracker.nix
+      # Apps
+      ../../system/apps/office.nix
+      ../../system/apps/dev.nix
+      ../../system/apps/art.nix
     ];
 
   # Bootloader.
@@ -28,10 +31,10 @@
   };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-075b0e5a-44d0-4383-b496-8763d1ef4875".device = "/dev/disk/by-uuid/075b0e5a-44d0-4383-b496-8763d1ef4875";
-  boot.initrd.luks.devices."luks-075b0e5a-44d0-4383-b496-8763d1ef4875".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".device = "/dev/disk/by-uuid/b88b46e4-d105-4a66-ab9c-25ff608d16b4";
+  boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "mcgpres"; # Define your hostname.
+  networking.hostName = "mcgzen"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -48,6 +51,10 @@
 
   hardware.cpu.intel.updateMicrocode = true;
 
+  boot.kernelModules = [ "coretemp" ];
+
+  services.thermald.enable = true;
+  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
