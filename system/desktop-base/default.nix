@@ -72,7 +72,6 @@
     nextcloud-client
     gimp
     inkscape
-    sublime-music
     schildichat-desktop
     fragments
     AusweisApp2
