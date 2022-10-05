@@ -7,6 +7,7 @@
 {
   imports = [
       # Import base modules
+      ../../system/thermald.nix
       ../../system/iio.nix
       ../../system/gnome
       ../../system/wireguard.nix
@@ -31,10 +32,6 @@
   boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".device = "/dev/disk/by-uuid/b88b46e4-d105-4a66-ab9c-25ff608d16b4";
   boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".keyFile = "/crypto_keyfile.bin";
 
-  boot.kernelModules = [ "coretemp" ];
-
-  services.thermald.enable = true;
-  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

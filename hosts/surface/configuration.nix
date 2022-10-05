@@ -9,7 +9,7 @@
       ./drives.nix
       ./scaling.nix
       # Import base modules
-      ../../system/common.nix
+      ../../system/thermald.nix
       ../../system/iio.nix
       ../../system/gnome
       ../../system/gnome/disable-tracker.nix
@@ -31,10 +31,6 @@
   boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".device = "/dev/disk/by-uuid/4e7c8ffd-96e3-4248-bf00-f02b6152b8b3";
   boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".keyFile = "/crypto_keyfile.bin";
 
-  boot.kernelModules = [ "coretemp" ];
-
-  services.thermald.enable = true;
-  
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
