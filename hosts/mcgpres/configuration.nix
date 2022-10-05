@@ -28,8 +28,6 @@
   boot.initrd.luks.devices."luks-075b0e5a-44d0-4383-b496-8763d1ef4875".device = "/dev/disk/by-uuid/075b0e5a-44d0-4383-b496-8763d1ef4875";
   boot.initrd.luks.devices."luks-075b0e5a-44d0-4383-b496-8763d1ef4875".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "mcgpres";
-
   hardware.cpu.intel.updateMicrocode = true;
 
   # This value determines the NixOS release from which the default

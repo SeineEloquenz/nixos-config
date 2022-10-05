@@ -40,6 +40,9 @@
         modules = defaultModules ++ [
           ./hosts/${name}/configuration.nix
           ./hosts/${name}/hardware-configuration.nix
+          {
+            networking.hostName = name;
+          }
         ];
       };
     in {

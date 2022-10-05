@@ -31,8 +31,6 @@
   boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".device = "/dev/disk/by-uuid/b88b46e4-d105-4a66-ab9c-25ff608d16b4";
   boot.initrd.luks.devices."luks-b88b46e4-d105-4a66-ab9c-25ff608d16b4".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "mcgzen";
-
   hardware.cpu.intel.updateMicrocode = true;
 
   boot.kernelModules = [ "coretemp" ];

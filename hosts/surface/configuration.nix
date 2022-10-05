@@ -31,8 +31,6 @@
   boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".device = "/dev/disk/by-uuid/4e7c8ffd-96e3-4248-bf00-f02b6152b8b3";
   boot.initrd.luks.devices."luks-4e7c8ffd-96e3-4248-bf00-f02b6152b8b3".keyFile = "/crypto_keyfile.bin";
 
-  networking.hostName = "surface";
-
   hardware.cpu.intel.updateMicrocode = true;
 
   boot.kernelModules = [ "coretemp" ];
