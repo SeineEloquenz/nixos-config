@@ -7,6 +7,7 @@
 
       shellAliases = {
         asystem = "sh ~/.dotfiles/scripts/apply-system.sh";
+        usystem = "sh ~/.dotfiles/scripts/update-system.sh";
         dump-wifi = "sh ~/.dotfiles/scripts/dump-wifi.sh";
       };
 
