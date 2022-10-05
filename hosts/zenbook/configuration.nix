@@ -5,11 +5,8 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+  imports = [
       # Import base modules
-      ../../system/common.nix
       ../../system/iio.nix
       ../../system/gnome
       ../../system/wireguard.nix

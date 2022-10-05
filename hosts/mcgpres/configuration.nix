@@ -1,13 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+  imports = [
       ./drives.nix
       ./audio.nix
       # Import base modules
-      ../../system/common.nix
       ../../system/docker.nix
       ../../system/nvidia.nix
       ../../system/gnome

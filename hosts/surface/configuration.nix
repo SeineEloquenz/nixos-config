@@ -5,9 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+  imports = [
       ./drives.nix
       ./scaling.nix
       # Import base modules

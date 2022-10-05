@@ -29,8 +29,11 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
         }
+        # Our modules
         ./modules/ssh-keys.nix
         ./modules/wireless.nix
+        # Common Components
+        ./system/common
       ];
     in {
       nixosConfigurations = {
@@ -38,18 +41,21 @@
           inherit system pkgs;
           modules = defaultModules ++ [
             ./hosts/mcgpres/configuration.nix
+            ./hosts/mcgpres/hardware-configuration.nix
           ];
         };
         mcgzen = lib.nixosSystem {
           inherit system pkgs;
           modules = defaultModules ++ [
             ./hosts/zenbook/configuration.nix
+            ./hosts/mcgpres/hardware-configuration.nix
           ];
         };
         surface = lib.nixosSystem {
           inherit system pkgs;
           modules = defaultModules ++ [
             ./hosts/surface/configuration.nix
+            ./hosts/mcgpres/hardware-configuration.nix
           ];
         };
       };
