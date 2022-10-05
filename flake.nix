@@ -38,7 +38,7 @@
             ./hosts/mcgpres/configuration.nix
           ];
         };
-        zenbook = lib.nixosSystem {
+        mcgzen = lib.nixosSystem {
           inherit system pkgs;
           modules = defaultModules ++ [
             ./hosts/zenbook/configuration.nix
