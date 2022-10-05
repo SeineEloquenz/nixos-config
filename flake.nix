@@ -35,29 +35,18 @@
         # Common Components
         ./system/common
       ];
+      mkSystem = name: nixpkgs.lib.nixosSystem {
+        inherit system pkgs;
+        modules = defaultModules ++ [
+          ./hosts/${name}/configuration.nix
+          ./hosts/${name}/hardware-configuration.nix
+        ];
+      };
     in {
       nixosConfigurations = {
-        mcgpres = lib.nixosSystem {
-          inherit system pkgs;
-          modules = defaultModules ++ [
-            ./hosts/mcgpres/configuration.nix
-            ./hosts/mcgpres/hardware-configuration.nix
-          ];
-        };
-        mcgzen = lib.nixosSystem {
-          inherit system pkgs;
-          modules = defaultModules ++ [
-            ./hosts/zenbook/configuration.nix
-            ./hosts/mcgpres/hardware-configuration.nix
-          ];
-        };
-        surface = lib.nixosSystem {
-          inherit system pkgs;
-          modules = defaultModules ++ [
-            ./hosts/surface/configuration.nix
-            ./hosts/mcgpres/hardware-configuration.nix
-          ];
-        };
+        mcgpres = mkSystem "mcgpres";
+        mcgzen = mkSystem "mcgzen";
+        surface = mkSystem "surface";
       };
     };
 }
