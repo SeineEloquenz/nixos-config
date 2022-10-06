@@ -9,5 +9,6 @@
     "MondcarionMOBILE"
     "rednose"
     "Karl7"
+    "KA-sWLAN"
   ];
 }
