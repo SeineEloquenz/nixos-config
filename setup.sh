@@ -37,4 +37,7 @@ mkdir -p ~/.ssh/keys
 # Actually apply
 sh ~/.dotfiles/scripts/apply-system.sh
 
+echo "Changing upstream to ssh url"
+git remote set-url origin git@github.com:SeineEloquenz/nixos-config.git
+
 echo "System set up, you might need to reboot for everything to work correctly"
