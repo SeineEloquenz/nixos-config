@@ -15,7 +15,8 @@ if [[ $isNew == [yY] ]];
 then
   cp /etc/nixos/configuration.nix ~/.dotfiles/hosts/$hostname
   cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/hosts/$hostname
-  read -p "Setup configuration.nix in ~/.dotfiles/hosts/$hostname/ and confirm afterwards (y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+  read -p "Setup configuration.nix in the upcoming prompt (y/n): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+  nano ~/.dotfiles/hosts/$hostname/configuration.nix
 fi
 
 # Ensures sops is set up correctly
