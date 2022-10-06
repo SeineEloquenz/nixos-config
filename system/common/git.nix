@@ -5,8 +5,10 @@
       lfs.enable = true;
       userName  = "Alexander Linder";
       userEmail = "alexander.linder@mondcarion.group";
-
       delta.enable = true;
+      extraConfig = {
+        pull.rebase = true;
+      };
     };
   };
 }
