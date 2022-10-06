@@ -30,6 +30,7 @@ chmod 600 $usersops/keys.txt
 sudo rbw get "sops key" > $rootsops/keys.txt
 sudo chmod 600 $rootsops/keys.txt
 exit
+rm -r ~/.local/share/rbw
 
 echo "Applying system configuration"
 # Workaround to ensure correct ownership on directory
