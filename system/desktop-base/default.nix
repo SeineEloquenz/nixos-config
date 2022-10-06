@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./bitwarden.nix
       ./printing.nix
       ./networking.nix
       ./audio.nix
