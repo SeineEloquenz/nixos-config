@@ -11,5 +11,6 @@
     "Karl7"
     "KA-sWLAN"
     "KIT-VPN"
+    "MCG-VPN" 
   ];
 }
