@@ -1,7 +1,7 @@
-{ pkgs, ... }:{
+{ config, pkgs, ... }:{
   virtualisation.docker = {
     enable = true;
-    enableNvidia = true;
+    enableNvidia = builtins.elem "nvidia" config.services.xserver.videoDrivers;
   };
 
   environment.systemPackages = [
