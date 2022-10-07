@@ -1,0 +1,27 @@
+network:
+    MondcarionGroup: ENC[AES256_GCM,data:aJlOXi7PM1EM4njrOfuUGexMHVxjEz4vt0CGpb8oXTM/1/7RWKq67np6Wt7gfPuRO5uszD5ATzhmIj8C/ndRzbSF5N0PwHyzCWFza5eNfInjKmIpwzbLsW9SJkOLsLp0c5xZIeG6tBEN+ljTzmD0+Za5jw2YCHjrabXSC6PktEPrbKFJedLvvbKdW5f+F/RBKq1xmyJ6622AOCQHBZ3fMcGqlBaYiC7+IEuFeIahzhmje8bNq7kUZ5RTXT/95Lfjvr3jiY9JYlqbZTTCl/HlmSji6I5FOEdl2xiD/A8DQWAHmajLOSFP17u2JkNHsxVup7L+kU3oeks5yjXYIsZn9vcMPk4lSl3F0+4ObE1IVnt3TlqpdggMY/IVRo0+zlJmLDT7U8CRfmom1o7pBwc=,iv:e6p8vQVbo9uML2KIRGvLxfSJyjbfovENnrhrezCVYjE=,tag:X9G6PtUn9NFVkzkB/z/WeQ==,type:str]
+    MondcarionMOBILE: ENC[AES256_GCM,data:2mQBQq/fYmAT+zYMb/GLceaja95VFKXH9IFNcdru9evSTyw8CxoQQ9c0ocRxvX7dyywBrfaHr8pXysMpRaa3AIRCPwMjr2ACdhRubBH+QonuvI5q15RNY/sF2bpomrC5X46dSAhty2EQl9ZrYD1q+mVZ5oixVdZjMJCWQOEKIP8clxWGHJMVVleFgw1mKPMZdis1QgJIHeJmkw+8xy1zzF7MZt2g+teiXYdRFZEuUdf0aT/rEfKczhAXIRmvRwpXf/lzVFZGxD9EONZR1fgLPIvF85nW1WTtCAEP408PFYtUinFb1pQgx+R92hHClGdzZQ5zsEkhINEywqIxFnLIJwK1wPQ618hSb3rd8ZKV6EI5/JS2k8dNgCXcil0BJMuh9ohQTE/tWg==,iv:mtA3ua+GH/TV0uH6H+wCNaAeYgwKd2AJ30uNwXzIr3U=,tag:7uDc06qZdwThzEt7aTgHbg==,type:str]
+    rednose: ENC[AES256_GCM,data:BkwnfZtgtLwe59ET3/A0H5qmmxor1tQ5o/OkzsWLPg9979xhIiUPvavT//KlhIqJSJFz5HBVW7ONDdQ998vqYtPZbL3mCVhZZdsuDfUD5GJl93ymLR4w5Qta52xORB6OHaAQi0ZpIrFRhpQIDQ8AJaSAoLf21HG7m5T2IUFvhzlpLytnUs7y69DTFOQGM+Qb2wSh21CdVr08HX/xn1o+GUZzt/rIvTkKufq6Ps+EYGkNugOFjesL8dE32Y7dzfa6O1v1dIwJw1AZKWyPtHAcmsr6YqP/4++AakXDAHhwbLKrrr64HamblAWdaW2H2vhPqg/yEkRamOt6KTvbsQei2S0Zb9g0LkqUhK9SJHx4jCpA+m0YNDMV,iv:6h3KUiygXcwemJaaw93dQjFYnGv0686pRZvIUHxUUSg=,tag:uDS8iAoIzI/tN7Ht4q0Vfw==,type:str]
+    Karl7: ENC[AES256_GCM,data:wXDXehBWzmudbBQ6q3Bda6LSJJ9vYKn00eoAnwNOMZ2jz47/fL/a6n7e+nvE880mbq0hjis0xq/8sO8XlUuWL0eglqvMBFIcZDPrScyzN94jB7a0H8DMobCnANbkt2ySXZ8JipzyCSmU3ch1QO6EJHZlCrwb8yx1nVTm70UYjL0V5K0qyZKnB8xblUMmAFkrVbF59rFKeldLgvejyHVZZNUqNIDL5/Ns5Jwkv5xixgz0fiVZLfo01cpuEaSZCMxjmVAriB0ynN7mnw8/KNyxL+xUlwTbCDY5yxOZzRe80n+FNosVSDIiD3R2hU2rjAa05meHeR/Zz7j0ZxzbaBksrbdrC/bzKUq1LJtMoN7dC1Db0Y89o2eRi0E=,iv:hoj1OdG9bPGiLxMnQ+0J0QOe5TV65B/l6i9RxcouXqY=,tag:dmauPPIvA3HWR7Y7fuT5VQ==,type:str]
+    KA-sWLAN: ENC[AES256_GCM,data:q3dry1V7EVwRNTktSh+B2U4j5cO/SNlsesejd6oA0jACNVQvDGB1yFidVN5De+AFITmtxcFbb370Q4qgv8O0DdNAUf9bpEyRyIbz39QUoXVXDBYGb+Sz6AvRs2ZKc4/Ag5Y0zyE98H/UR2iEeuRMCgEVzINNLPAfWsw8oswzi32NXgztx2TZXbvlq5KYa6I/St1Fio52nK+WBz2JIiQXXhfQURWpO9pwn93brsFckqnfGDvXeMkEwOe/+KFFyocsvoY4vy99ldAXuKoyiKAlmMl65wFejBPwJW2kdnXqstsjUAwvex8kuU5y1Ego97kr4TpYTvyMqDclP7x8+LG7v7yPDU2r1f30bXPBrXXLQ4pdzjHOzq0Qa9PwGmqL8be5RPCthtPK6CaMkwDCa5t5+flWf93o7TYU8EUJMBscQXQHsgXrDKuTkAozISU4WmUFArEh3m6LHOZ8lNPzYCkDLOlEnfMnH6+rkHXV7V9LsY3adqch5APt3iYzI7/LXZ5bnfURqW1oK86oVdhQM2jf7g==,iv:6Z7Xw74J2YVp46gPHkULAWJkDcv2hKcahzwO8XA7/iU=,tag:zykc4zlD9787RztEfr/31A==,type:str]
+    KIT-VPN: ENC[AES256_GCM,data:BammhL18ZikenLkzP8aRCxq8S3vD0K1Ve8/fESjfav/7t239s1c5uluw1JB1GfghDvHWS6VAWTtKSmULI0Q+EHMe9vOSScDah8TLk5v03rT1/6fdp/EDWOXi7HTdMGJKGKJGEmakIVxNtUeRxK5tNqJ7ChRgzmZJrGJDNzED75F5r577mjsAn86k580oHm2PcX16806w7dKBtabdeMEoeKTUYRhvQZdFo+F6WLjPGp9+2gyccFCuiqnuuAjhj8xvgDbASoZrKDKpEIN3xIyHHNaZTtZYaahc3JtewTyJN9naD9+bQDIn5kYLi5BnsemNvb42FJnCPcl0OlFAM2XjFMHBWvzyKe98/GRuUYxXywLhMI9iM/miIusOe2pWrV11dGHheCgpeGrpHU6vND9Yxwxyf00tV1qv8uHlrJxxUVTbsMw1xtaynZxGS3tEeQ/uWzv2J2v9ukPA0i7m9y5UMuXqphCsOyokfyngyt0b30ZfneNchd4pYigyKe79HMc0wYY4+ZImW3fTJKvZ69X7Tb2vpt+ntVXisy3mQgCHsqab1w8aVORYm9ZfBiYb11kdrQHfFQ==,iv:c6Xq/EVb70nPWd0JT7QU6mIlSwb42Qh6Q5gbO8d2dGA=,tag:8rzZsbennA7W8XuYMBDvmA==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1a0f9f4k4zt8nmd3syj234ywzwh9jat4asu9fx8spdccyj263m52sr2xlve
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAyU0VXOUsrblRvOXJIMXlw
+            ZWc2NjZzTGk2NGc0TXU1eXZIU1FDeTZuRXp3CkdZUTJCSzZjWUNxN1JFSlVzMDNk
+            TjlUVUdkdkhNN0pyMkoyM2J3T3lkZTQKLS0tIFFDRnVFaWJ0eXpleWUyVTYzTFZS
+            OXV4R2d5TDVrbzkxRjJiOGJyeDZOT28KL67LzhSUZLJKLjwSQO1pOFcvb38dmZNZ
+            WYgROClVKJ+NmrWYLg9V9vyPRCsNRjb/PIACLTLnah+ZUoBYjmqNSQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-10-07T23:34:21Z"
+    mac: ENC[AES256_GCM,data:OS172uHtKmdV9RiqRxbL1CIZDOaqY+vWMRE+vBMmEZURrx1o2gjKrohYAbxcQngrqaO6A/OMIFmLdoihVNY9kICzUx/ASfopsh9dt/lGdpGTtFYupT00ZGcAuIOoeXQ0+Q8bnInkb8BQnaQtEKjOvdo3FUBg7AGhzM3vp2jfhiY=,iv:9yha6SQ1CfAK+ImeIKGbJy2lpA7sW4KlLKkddga97f4=,tag:EXkRP042Qjiwuml3JVztZw==,type:str]
+    pgp: []
+    unencrypted_suffix: _unencrypted
+    version: 3.7.3

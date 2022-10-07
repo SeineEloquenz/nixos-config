@@ -31,7 +31,7 @@
         }
         # Our modules
         ./modules/ssh-keys.nix
-        ./modules/wireless.nix
+        ./modules/networks.nix
         # Common Components
         ./system/common
       ];

@@ -5,16 +5,16 @@ with lib;
 let
   cfg = config.networking.networkmanager;
 
-  createWifi = ssid: {
-    name = "wifi/${ssid}";
+  createNetwork = ssid: {
+    name = "network/${ssid}";
     value = {
       owner = "root";
       path = "/etc/NetworkManager/system-connections/${ssid}.nmconnection";
-      sopsFile = ./../.secrets/wifi.yaml;
+      sopsFile = ./../.secrets/networks.yaml;
     };
   };
 
-  sopsWifis = listToAttrs (map createWifi config.networking.networkmanager.networks);
+  sopsNetworks = listToAttrs (map createNetwork config.networking.networkmanager.networks);
 in {
 
   options.networking.networkmanager = {
@@ -25,6 +25,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    sops.secrets = sopsWifis;
+    sops.secrets = sopsNetworks;
   };
 }

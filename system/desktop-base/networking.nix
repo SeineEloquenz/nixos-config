@@ -10,5 +10,6 @@
     "rednose"
     "Karl7"
     "KA-sWLAN"
+    "KIT-VPN"
   ];
 }
