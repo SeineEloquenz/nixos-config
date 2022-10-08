@@ -32,6 +32,8 @@
         # Our modules
         ./modules/ssh-keys.nix
         ./modules/networks.nix
+        # Our packages
+        ./packages/idrac-6
         # Common Components
         ./system/common
       ];

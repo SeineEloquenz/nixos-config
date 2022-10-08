@@ -9,6 +9,7 @@
       ../../system/nvidia.nix
       ../../system/gnome
       ../../system/gaming
+      ../../system/idrac.nix
       ../../system/apps/office.nix
       ../../system/apps/dev.nix
       ../../system/apps/art.nix
