@@ -43,7 +43,7 @@ in stdenv.mkDerivation rec {
     cp -r ${src}/lib $out
 
     makeWrapper ${steam-run}/bin/steam-run $out/bin/iDRAC \
-      --add-flags "${jre}/bin/java -cp $out/share/java/avctKVM.jar com.avocent.idrac.kvm.Main -Djava.security.debug=properties -Djava.library.path=$out/lib -Djava.security.properties==$out/share/java/java.security ip=${iDRAC.host} kmport=${iDRAC.port} vport=${iDRAC.port} user=${iDRAC.user} passwd=\"$(cat ~/.config/idrac-6/pw)\" apcp=1 version=2 vmprivilege=true \"helpurl=https://${iDRAC.host}:443/help/contents.html\""
+      --add-flags "${jre}/bin/java -cp $out/share/java/avctKVM.jar com.avocent.idrac.kvm.Main -Djava.security.debug=properties -Djava.library.path=$out/lib -Djava.security.properties==$out/share/java/java.security ip=${iDRAC.host} kmport=${iDRAC.port} vport=${iDRAC.port} user=${iDRAC.user} passwd=\"\$(< ~/.config/idrac-6/pw)\" apcp=1 version=2 vmprivilege=true \"helpurl=https://${iDRAC.host}:443/help/contents.html\""
     mkdir -pv $out/share/applications
     cp ${desktopFile}/share/applications/* $out/share/applications/iDRAC.desktop
   '';
