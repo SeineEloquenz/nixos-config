@@ -14,6 +14,8 @@
       ../../system/gnome
       ../../system/gnome/disable-tracker.nix
       ../../system/wireguard.nix
+      # Apps
+      ../../system/idrac.nix
       ../../system/apps/office.nix
     ];
 

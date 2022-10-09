@@ -13,6 +13,7 @@
       ../../system/wireguard.nix
       ../../system/gnome/disable-tracker.nix
       # Apps
+      ../../system/idrac.nix
       ../../system/apps/office.nix
       ../../system/apps/dev.nix
       ../../system/apps/art.nix
