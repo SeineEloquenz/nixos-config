@@ -95,12 +95,12 @@
 
         "cloud.internal.mondcarion.group" = {
           user = "root";
-          identityFile = "~/.ssh/keys/geusts";
+          identityFile = "~/.ssh/keys/guests";
         };
 
         "fancontrol-0.internal.mondcarion.group" = {
           user = "root";
-          identityFile = "~/.ssh/keys/geusts";
+          identityFile = "~/.ssh/keys/guests";
         };
 
         "navidrome.internal.mondcarion.group" = {
