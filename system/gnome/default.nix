@@ -26,7 +26,7 @@
       package = pkgs.layan-kde;
     };
     gtkTheme = {
-      name = "Layan-dark";
+      name = "Layan-Dark";
       package = pkgs.layan-gtk-theme;
     };
     cursorTheme = {
