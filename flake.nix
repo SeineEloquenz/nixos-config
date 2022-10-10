@@ -20,7 +20,10 @@
         inherit system;
         config = {
           allowUnfree = true;
-        };
+        };  
+        overlays = [
+          (import ./overlays/layan.nix)
+        ];
       };
       lib = nixpkgs.lib;
       defaultModules = [
