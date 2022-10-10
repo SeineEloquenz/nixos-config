@@ -1,64 +1,109 @@
 { config, lib, pkgs, ... }:
+
 with lib;
 
 let
   vars = {
     QT_STYLE_OVERRIDE = "kvantum";
   };
-  layanWallpaper = ../../files/wallpaper.png;
-  layanEnv = pkgs.buildEnv {
-    name = "layanEnv";
+  wallpaper = ../../files/wallpaper.png;
+  themeEnv = theme: pkgs.buildEnv {
+    name = "${theme.name}-env";
     paths = [
-      pkgs.layan-gtk-theme
+      theme.package
       (pkgs.runCommand "wallpaper" {} ''
-        mkdir -p $out/share/themes/Layan-Dark/gnome-shell/assets
-        ln -s ${layanWallpaper} $out/share/themes/Layan-Dark/gnome-shell/assets/background.png
+        mkdir -p $out/share/themes/${theme.name}/gnome-shell/assets
+        ln -s ${wallpaper} $out/share/themes/${theme.name}/gnome-shell/assets/background.png
       '')
     ];
   };
+
+  themeOption = mkOption {
+    type = types.submodule {
+      options = {
+        name = mkOption {
+          type = types.str;
+        };
+        package = mkOption {
+          type = types.package;
+        };
+      };
+    };
+  };
+
+  theming = config.theming;
+
 in {
-  home-manager.users.alexa = {
-    qt.enable = true;
-    qt.style = {
-      name = "kvantum";
+
+  options.theming = with types; {
+    enable = mkOption {
+      type = bool;
+    };
+    gtkTheme = themeOption;
+    cursorTheme = themeOption;
+    iconTheme = themeOption;
+    qtTheme = themeOption;
+    font = themeOption;
+  };
+
+  config = mkIf config.theming.enable {
+
+    environment.variables = mkForce {
+      QT_STYLE_OVERRIDE = "kvantum";
+      QT_QPA_PLATFORMTHEME = "qt5ct";
     };
 
-    home.file.".face".source = ./../../files/obiwan.jpg;
+    home-manager.users.alexa = {
 
-    home.sessionVariables = vars;
-    systemd.user.sessionVariables = vars;
+      qt.enable = true;
+      qt.style = {
+        name = "kvantum";
+      };
 
-    xdg.configFile."Kvantum/kvantum.kvconfig".source = ./../../files/kvantum.kvconfig;
+      home.file.".face".source = ./../../files/obiwan.jpg;
 
-    gtk.enable = true;
+      home.sessionVariables = vars;
+      systemd.user.sessionVariables = vars;
 
-    gtk.cursorTheme = {
-      name = "Numix-Cursor";
-      package = pkgs.numix-cursor-theme;
+      xdg.configFile."Kvantum/kvantum.kvconfig".source = ./../../files/kvantum.kvconfig;
+
+      gtk.enable = true;
+
+      gtk.cursorTheme = theming.cursorTheme;
+
+      gtk.iconTheme = theming.iconTheme;
+
+      gtk.theme = theming.gtkTheme;
+
+      xdg.configFile."gtk-4.0/gtk.css".source = "${themeEnv theming.gtkTheme}/share/themes/${theming.gtkTheme.name}/gtk-4.0/gtk.css";
+      xdg.configFile."gtk-4.0/assets" = {
+        source = "${themeEnv theming.gtkTheme}/share/themes/${theming.gtkTheme.name}/gtk-4.0/assets";
+        recursive = true;
+      };
+
+      gtk.font = theming.font;
+
+      home.packages = with pkgs; [
+        libsForQt5.qtstyleplugin-kvantum
+        theming.qtTheme.package
+        qt5ct
+      ];
+
+      dconf.settings = {
+        "org/gnome/shell/extensions/user-theme" = {
+          name = theming.gtkTheme.name;
+        };
+
+        "org/gnome/desktop/background" = {
+          picture-uri = "file:///home/alexa/.dotfiles/files/wallpaper.png";
+          picture-uri-dark = "file:///home/alexa/.dotfiles/files/wallpaper.png";
+        };
+
+        "org/gnome/desktop/wm/preferences" = {
+          button-layout = "appmenu:minimize,maximize,close";
+          titlebar-font = "MontSerrat Semi-Bold 11";
+        };
+      };
     };
-
-    gtk.iconTheme = {
-      name = "Tela-dark";
-      package = pkgs.tela-icon-theme;
-    };
-
-    gtk.theme = {
-      name = "Layan-dark";
-      package = layanEnv;
-    };
-    xdg.configFile."gtk-4.0/gtk.css".source = "${layanEnv}/share/themes/Layan-dark/gtk-4.0/gtk.css";
-    xdg.configFile."gtk-4.0/assets" = {
-      source = "${layanEnv}/share/themes/Layan-dark/gtk-4.0/assets";
-      recursive = true;
-    };
-
-    gtk.font = {
-      name = "Montserrat SemiBold";
-      package = pkgs.montserrat;
-    };
-
-    home.packages = with pkgs; [
-      libsForQt5.qtstyleplugin-kvantum
-    ];
   };
 }

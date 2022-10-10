@@ -61,10 +61,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # Themes
-    layan-kde
-    layan-gtk-theme
-    tela-icon-theme
     # Utils
     scanmem
     jdk

@@ -19,9 +19,28 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
-  environment.variables = lib.mkForce {
-    QT_STYLE_OVERRIDE = "kvantum";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+  theming = {
+    enable = true;
+    qtTheme = {
+      name = "Layan-KDE";
+      package = pkgs.layan-kde;
+    };
+    gtkTheme = {
+      name = "Layan-dark";
+      package = pkgs.layan-gtk-theme;
+    };
+    cursorTheme = {
+      name = "Numix-Cursor";
+      package = pkgs.numix-cursor-theme;
+    };
+    iconTheme = {
+      name = "Tela-dark";
+      package = pkgs.tela-icon-theme;
+    };
+    font = {
+      name = "Montserrat SemiBold";
+      package = pkgs.montserrat;
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -38,8 +57,6 @@
     # Third Party software
     baobab
     gparted
-    # For QT Theming
-    qt5ct
   ];
 
   services.udev.packages = with pkgs; [
