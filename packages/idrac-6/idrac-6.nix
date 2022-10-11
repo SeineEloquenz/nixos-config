@@ -26,6 +26,7 @@ let
     comment = "Virtual Console for iDRAC based dell management controllers";
     desktopName = "iDRAC Virtual Console";
     categories = [ "System" ];
+    icon = ./src/share/icons/dell-logo.png;
   };
 
   idrac-env = buildFHSUserEnv {
@@ -48,10 +49,9 @@ let
     src = ./src;
 
     installPhase = ''
-      mkdir -pv $out/share/java $out/bin $out/lib
-      cp ${src}/avctKVM.jar $out/share/java/avctKVM.jar
-      cp ${src}/java.security $out/share/java/java.security
+      mkdir -pv $out/share $out/bin $out/lib
       cp -r ${src}/lib $out
+      cp -r ${src}/share $out
 
       cat <<EOT >> $out/lib/iDRAC
       java -cp $out/share/java/avctKVM.jar com.avocent.idrac.kvm.Main -Djava.security.debug=properties -Djava.library.path=$out/lib -Djava.security.properties==$out/share/java/java.security ip=${iDRAC.host} kmport=${iDRAC.port} vport=${iDRAC.port} user=${iDRAC.user} passwd="\$(< ~/.config/idrac-6/pw)" apcp=1 version=2 vmprivilege=true "helpurl=https://${iDRAC.host}:443/help/contents.html"
@@ -73,8 +73,6 @@ in runCommand "iDRAC"
       #!${pkgs.bash}/bin/bash
       ${idrac-env}/bin/idrac-6-env ${idrac}/bin/start.sh "$@"
     '';
-    preferLocalBuild = true;
-    allowSubstitutes = false;
   }
   ''
     mkdir -p $out/{bin,share}
