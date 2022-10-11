@@ -12,8 +12,8 @@ let
   jre = stdenv.mkDerivation {
     name = "idrac-6-jre";
     src = builtins.fetchTarball {
-      url = "https://download.java.net/openjdk/jdk7u75/ri/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz";
-      sha256 = "1vlj04z7glpgqdbkwla92xxbjdbqb805jxb4gvz1z1vwpma8hh5i";
+      url = "https://cdn.azul.com/zulu/bin/zulu7.56.0.11-ca-jdk7.0.352-linux_x64.tar.gz";
+      sha256 = "15xb1ahnqjmmi7688rspd8aqsqh9qcyfjqdj4yi2q2n9yk920rq3";
     };
     installPhase = ''
       cp -r $src $out
