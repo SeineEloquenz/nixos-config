@@ -10,7 +10,6 @@
       ../../system/thermald.nix
       ../../system/iio.nix
       ../../system/gnome
-      ../../system/wireguard.nix
       ../../system/gnome/disable-tracker.nix
       # Apps
       ../../system/idrac.nix
