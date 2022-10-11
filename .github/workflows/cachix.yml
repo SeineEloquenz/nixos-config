@@ -1,11 +1,25 @@
-name: "Cachix"
+name: "ci: Build 'nixosConfigurations'"
 on:
   pull_request:
   push:
+env:
+  NIX_SHOW_STATS: 1
 jobs:
-  cachix:
+  build:
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        device: [mcgpres, mcgzen, surface]
     steps:
+    - name: Maximize build space
+      run: |
+        sudo rm -rf /usr/share/dotnet
+        sudo rm -rf /opt/ghc
+        sudo rm -rf "/usr/local/share/boost"
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
     - uses: actions/checkout@v2.4.0
     - uses: cachix/install-nix-action@v16
       with:
@@ -14,5 +28,7 @@ jobs:
       with:
         name: mcg-cache
         authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-    - run: nix flake archive --json | jq -r '.path,(.inputs|to_entries[].value.path)' | cachix push mcg-cache
-    - run: nix build --json   | jq -r '.[].outputs | to_entries[].value' | cachix push mycache
+    - name: Build Configuration
+      run: |
+        nix flake archive --json | jq -r '.path,(.inputs|to_entries[].value.path)' | cachix push mcg-cache
+        nix build --json .#nixosConfigurations.${{ matrix.device }}.config.system.build.toplevel -L --show-trace | cachix push mcg-cache
