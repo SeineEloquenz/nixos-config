@@ -122,6 +122,10 @@
           user = "root";
           identityFile = "~/.ssh/keys/guests";
         };
+        "nix-cache.internal.mondcarion.group" = {
+          user = "root";
+          identityFile = "~/.ssh/keys/guests";
+        };
       };
     };
   };
