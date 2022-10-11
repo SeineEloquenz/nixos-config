@@ -19,6 +19,10 @@
       ../../system/apps/office.nix
     ];
 
+  networking.networkmanager.networks = [
+    "MCG-surface-VPN"
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
