@@ -27,6 +27,12 @@
       automatic = true;
       dates = [ "daily" ];
     };
+    settings.substituters = [
+      "https://mcg-cache.cachix.org/"
+    ];
+    settings.trusted-public-keys = [
+      "mcg-cache.cachix.org-1:VjFN0xFIgM5EXKMbglSW8TzOSCFMnG+L+2uKuglqg9o="
+    ];
   };
 
   # Set nano as EDITOR
@@ -95,6 +101,8 @@
     git-lfs
     unrar
     unzip
+    # cachix
+    cachix
     # networking
     dig
     tcpdump
