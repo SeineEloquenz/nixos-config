@@ -7,7 +7,6 @@
     ./ssh.nix
     ./zsh.nix
     ./git.nix
-    ./cachix.nix
   ];
 
 
