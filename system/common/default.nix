@@ -28,6 +28,7 @@
       automatic = true;
       dates = [ "daily" ];
     };
+    settings.trusted-users = [ "alexa" ];
   };
 
   # Set nano as EDITOR

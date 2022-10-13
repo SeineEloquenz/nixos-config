@@ -1,4 +1,9 @@
 #!/bin/sh
+if [ "$1" == "-c" ]; then
+arg="--option substituters ssh://nix-cache"
+else
+arg=""
+fi
 pushd ~/.dotfiles
-sudo nixos-rebuild build --flake . && sudo nixos-rebuild switch --flake . $@ && cachix push mcg-cache result
+nixos-rebuild build $arg --flake . && sudo nixos-rebuild switch --flake .
 popd
