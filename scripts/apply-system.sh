@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ "$1" == "-c" ]; then
-arg="--option substituters ssh://nix-cache"
+arg="--option extra-substituters http://nix-cache.internal.mondcarion.group:3000"
 else
 arg=""
 fi
