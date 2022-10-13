@@ -43,6 +43,12 @@
       '';
 
       matchBlocks = {
+        "nix-cache" = {
+          identityFile = "~/.ssh/id_ecdsa";
+          user = "alexa";
+          hostname = "nix-cache.internal.mondcarion.group";
+        };
+
         "aur.archlinux.org" = {
           user = "aur";
           identityFile = "~/.ssh/keys/aur";
