@@ -10,8 +10,8 @@
       ./firefox.nix
     ];
 
-  # XDG Environment variables
   environment.sessionVariables = rec {
+    # XDG variables
     XDG_CACHE_HOME  = "\${HOME}/.cache";
     XDG_CONFIG_HOME = "\${HOME}/.config";
     XDG_BIN_HOME    = "\${HOME}/.local/bin";
@@ -20,6 +20,9 @@
     PATH = [ 
       "\${XDG_BIN_HOME}"
     ];
+
+    # Fix electron on Wayland
+    NIXOS_OZONE_WL = "1";
   };
 
   # Enable the X11 windowing system.
