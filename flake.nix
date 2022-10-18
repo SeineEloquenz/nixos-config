@@ -37,6 +37,7 @@
         ./modules/networks.nix
         # Our packages
         ./packages/idrac-6
+        ./packages/steam-adwaita
         # Common Components
         ./system/common
       ];
