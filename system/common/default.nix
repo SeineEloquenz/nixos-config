@@ -34,7 +34,6 @@
       trusted-public-keys = [
         "mcg-cache:3LM/byAOLl7mi6Dj78jpbbf6ZqK3C/S6II84fI2zM58="
       ];
-#      trusted-users = [ "alexa" ];
     };
   };
 
