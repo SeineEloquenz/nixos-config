@@ -1,2 +1,3 @@
 { pkgs, ... }:{
   environment.systemPackages = [ chiaki ];
+}
