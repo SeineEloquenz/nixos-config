@@ -16,6 +16,8 @@
       ../../system/apps/office.nix
       ../../system/apps/dev.nix
       ../../system/apps/art.nix
+      # Games
+      ../../system/gaming/minecraft.nix
     ];
 
   networking.networkmanager.networks = [
