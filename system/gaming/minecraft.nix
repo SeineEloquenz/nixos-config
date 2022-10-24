@@ -1,5 +1,3 @@
 { pkgs, ... }:{
-  environment.systemPackages = with pkgs; [
-    prismlauncher
-  ];
+  services.prismlauncher.enable = true;
 }
