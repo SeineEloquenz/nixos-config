@@ -4,7 +4,7 @@ with lib;
 
 {
 
-  options.services.prismlauncher = {
+  options.programs.prismlauncher = {
     enable = mkOption {
       type = types.bool;
       description = "Whether to enable the Prismlauncher Minecraft Launcher";
@@ -16,7 +16,7 @@ with lib;
     };
   };
 
-  config = mkIf config.services.prismlauncher.enable {
-    environment.systemPackages = [ (pkgs.prismlauncher.override { jdks = config.services.prismlauncher.jdks; }) ];
+  config = mkIf config.programs.prismlauncher.enable {
+    environment.systemPackages = [ (pkgs.prismlauncher.override { jdks = config.programs.prismlauncher.jdks; }) ];
   };
 }
