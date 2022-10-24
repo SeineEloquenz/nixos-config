@@ -23,6 +23,7 @@
         };  
         overlays = [
           (import ./overlays/layan.nix)
+          (import ./overlays/nextcloud-client.nix)
         ];
       };
       lib = nixpkgs.lib;
