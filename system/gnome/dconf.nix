@@ -5,6 +5,7 @@
   home-manager.users.alexa = {
     dconf.settings = {
       "org/gnome/shell" = {
+        always-show-log-out = true;
         enabled-extensions = [
           "user-theme@gnome-shell-extensions.gcampax.github.com"
           "Vitals@CoreCoding.com"
