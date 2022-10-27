@@ -4,7 +4,7 @@
   networking.networkmanager.enable = true;
 
   # Secrets
-  networking.networkmanager.networks = [
+  networking.networkmanager.generic-networks = [
     "MondcarionGroup"
     "MondcarionMOBILE"
     "rednose"

@@ -18,8 +18,8 @@
       ../../system/apps/office.nix
     ];
 
-  networking.networkmanager.networks = [
-    "MCG-surface-VPN"
+  networking.networkmanager.specific-networks = [
+    "MCG-VPN"
   ];
 
   # Bootloader.

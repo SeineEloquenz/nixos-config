@@ -15,8 +15,8 @@
       ../../system/apps/art.nix
     ];
 
-  networking.networkmanager.networks = [
-    "MCG-mcgpres-VPN"
+  networking.networkmanager.specific-networks = [
+    "MCG-VPN"
   ];
 
   # Bootloader.

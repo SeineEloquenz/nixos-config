@@ -5,8 +5,8 @@ with lib;
 let
   cfg = config.networking.networkmanager;
 
-  createNetwork = ssid: {
-    name = "network/${ssid}";
+  createSecret = secretName: ssid: {
+    name = "network/${secretName}";
     value = {
       owner = "root";
       path = "/etc/NetworkManager/system-connections/${ssid}.nmconnection";
@@ -14,17 +14,27 @@ let
     };
   };
 
-  sopsNetworks = listToAttrs (map createNetwork config.networking.networkmanager.networks);
+  createGeneric = ssid: createSecret ssid ssid;
+
+  createSpecific = name: createSecret ("${config.networking.hostName}-" + name) name;
+
+
+  sopsGenerics = listToAttrs (map createGeneric config.networking.networkmanager.generic-networks);
+  sopsSpecifics = listToAttrs (map createSpecific config.networking.networkmanager.specific-networks);
 in {
 
   options.networking.networkmanager = {
-    networks = mkOption {
+    generic-networks = mkOption {
+      type = with types; listOf str;
+      default = [];
+    };
+    specific-networks = mkOption {
       type = with types; listOf str;
       default = [];
     };
   };
 
   config = mkIf cfg.enable {
-    sops.secrets = sopsNetworks;
+    sops.secrets = recursiveUpdate sopsGenerics sopsSpecifics;
   };
 }

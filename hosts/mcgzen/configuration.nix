@@ -20,8 +20,8 @@
       ../../system/gaming/minecraft.nix
     ];
 
-  networking.networkmanager.networks = [
-    "MCG-mcgzen-VPN"
+  networking.networkmanager.specific-networks = [
+    "MCG-VPN"
   ];
 
   # Bootloader.
