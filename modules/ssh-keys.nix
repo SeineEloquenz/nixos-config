@@ -35,7 +35,7 @@ let
     value = {
       owner = "${key.owner}";
       path = "/home/${key.owner}/.ssh/${dirPath key.dir}${name}";
-      sopsFile = ./../.secrets/ssh.yaml;
+      sopsFile = ./../secrets/ssh.yaml;
     };
   };
 

@@ -10,7 +10,7 @@ let
     value = {
       owner = "root";
       path = "/etc/NetworkManager/system-connections/${ssid}.nmconnection";
-      sopsFile = ./../.secrets/networks.yaml;
+      sopsFile = ./../secrets/networks.yaml;
     };
   };
 
