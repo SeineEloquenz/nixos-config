@@ -7,6 +7,7 @@ with lib;
   options.programs.prismlauncher = {
     enable = mkOption {
       type = types.bool;
+      default = false;
       description = "Whether to enable the Prismlauncher Minecraft Launcher";
     };
     jdks = mkOption {

@@ -7,6 +7,7 @@ with lib;
   options.services.idrac-6 = {
     enable = mkOption {
       type = types.bool;
+      default = false;
     };
     host = mkOption {
       type = types.str;

@@ -11,6 +11,7 @@ in {
   options.programs.steam.adwaita-theme = {
     enable = mkOption {
       type = types.bool;
+      default = false;
       description = "Whether to enable steam adwaita theme";
     };
   };
