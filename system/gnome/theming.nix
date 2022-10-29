@@ -3,8 +3,9 @@
 with lib;
 
 let
-  vars = {
+  buildVars = themeName: {
     QT_STYLE_OVERRIDE = "kvantum";
+    GTK_THEME = themeName;
   };
   wallpaper = ../../files/wallpaper.png;
   themeEnv = theme: pkgs.buildEnv {
@@ -62,8 +63,8 @@ in {
 
       home.file.".face".source = ./../../files/obiwan.jpg;
 
-      home.sessionVariables = vars;
-      systemd.user.sessionVariables = vars;
+      home.sessionVariables = buildVars theming.gtkTheme.name;
+      systemd.user.sessionVariables = buildVars theming.gtkTheme.name;
 
       xdg.configFile."Kvantum/kvantum.kvconfig".source = ./../../files/kvantum.kvconfig;
 
