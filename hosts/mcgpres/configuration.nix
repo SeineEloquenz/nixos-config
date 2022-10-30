@@ -15,9 +15,14 @@
       ../../system/apps/art.nix
     ];
 
-  networking.networkmanager.specific-networks = [
-    "MCG-VPN"
-  ];
+  networking.networkmanager = {
+    generic-networks = [
+      "Wired connection 1"
+    ];
+    specific-networks = [
+      "MCG-VPN"
+    ];
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
