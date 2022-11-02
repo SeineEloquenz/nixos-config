@@ -10,6 +10,8 @@
     "rednose"
     "Karl7"
     "KA-sWLAN"
+    "KIT"
+    "eduroam"
     "KIT-VPN"
   ];
 }
