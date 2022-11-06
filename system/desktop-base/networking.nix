@@ -8,6 +8,7 @@
     "MondcarionGroup"
     "MondcarionMOBILE"
     "rednose"
+    "Schwarzwaldklick"
     "Karl7"
     "KA-sWLAN"
     "KIT"
