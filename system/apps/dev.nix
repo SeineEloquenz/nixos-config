@@ -1,10 +1,21 @@
-{ config, pkgs, ... }:{
+{ config, pkgs, ... }:
+
+let
+
+  texlive-juso-template.pkgs = [ pkgs.texlive-juso-template ];
+
+  mytexlive = with pkgs; (texlive.combine {
+    inherit (texlive) scheme-full;
+    inherit texlive-juso-template;
+  });
+
+in {
   environment.systemPackages = with pkgs; [
     jetbrains.webstorm
     jetbrains.idea-ultimate
     dbeaver
     vscodium
-    texlive.combined.scheme-full
+    mytexlive
     nix-prefetch-git
   ];
 

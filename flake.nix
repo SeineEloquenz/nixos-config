@@ -24,6 +24,7 @@
         overlays = [
           (import ./overlays/layan.nix)
           (import ./overlays/nextcloud-client.nix)
+          (import ./packages)
         ];
       };
       lib = nixpkgs.lib;
