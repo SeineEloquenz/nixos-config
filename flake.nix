@@ -24,7 +24,7 @@
         overlays = [
           (import ./overlays/layan.nix)
           (import ./overlays/nextcloud-client.nix)
-          (import ./packages)
+          (import ./pkgs)
         ];
       };
       lib = nixpkgs.lib;
@@ -39,8 +39,8 @@
         ./modules/networks.nix
         ./modules/prismlauncher.nix
         # Our packages
-        ./packages/idrac-6
-        ./packages/steam-adwaita
+        ./pkgs/idrac-6
+        ./pkgs/steam-adwaita
         # Common Components
         ./system/common
       ];
