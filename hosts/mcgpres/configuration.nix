@@ -15,6 +15,8 @@
       ../../system/apps/art.nix
     ];
 
+  powerManagement.cpuFreqGovernor = "balanced";
+
   networking.networkmanager = {
     generic-networks = [
       "Wired connection 1"
