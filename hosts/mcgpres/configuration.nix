@@ -15,7 +15,7 @@
       ../../system/apps/art.nix
     ];
 
-  powerManagement.cpuFreqGovernor = "balanced";
+  powerManagement.cpuFreqGovernor = "schedutil";
 
   networking.networkmanager = {
     generic-networks = [
