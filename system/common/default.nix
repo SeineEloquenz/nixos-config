@@ -85,6 +85,9 @@
     home.homeDirectory = "/home/alexa";
 
     nixpkgs.config.allowUnfree = true;
+    xdg.configFile."nixpkgs/config.nix".text = ''
+      { allowUnfree = true; }
+    '';
 
     # Let Home Manager install and manage itself.
     programs.home-manager.enable = true;
