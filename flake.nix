@@ -15,9 +15,14 @@
       url = "github:SeineEloquenz/juso-motion-template";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    idrac-6 = {
+      url = "github:SeineEloquenz/idrac-6-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.sops-nix.follows = "sops-nix";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, sops-nix, home-manager, juso-motion-template }:
+  outputs = inputs@{ self, nixpkgs, sops-nix, home-manager, juso-motion-template, idrac-6 }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -37,6 +42,7 @@
       lib = nixpkgs.lib;
       defaultModules = [
         sops-nix.nixosModules.sops
+        idrac-6.nixosModules.idrac-6
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
@@ -46,7 +52,6 @@
         ./modules/networks.nix
         ./modules/prismlauncher.nix
         # Our packages
-        ./pkgs/idrac-6
         ./pkgs/steam-adwaita
         # Common Components
         ./system/common

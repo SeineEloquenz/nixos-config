@@ -8,17 +8,40 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1668716823,
-        "narHash": "sha256-e6d2SIIiJOvTzItUbp+GJVhPD6AzSm823XAyPvPlpvo=",
+        "lastModified": 1668788863,
+        "narHash": "sha256-FsdUG+YkRX7JZKZm6T44J2h+0pXB1sWA9AobyiozFK0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "fe85cc4c37d5f37104e349c5553029417e3833d1",
+        "rev": "948d1f8a5cef55a281d4f5d17f3b79df6c82fce1",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "ref": "master",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "idrac-6": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "sops-nix": [
+          "sops-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1668792969,
+        "narHash": "sha256-PbL5g+zMUOelsRSnERTAvviMxCES1nvmAf2y6tf25tQ=",
+        "owner": "SeineEloquenz",
+        "repo": "idrac-6-nix",
+        "rev": "08eaada8541cecded90aa53b49bdd01b44fbf525",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SeineEloquenz",
+        "repo": "idrac-6-nix",
         "type": "github"
       }
     },
@@ -44,11 +67,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1668596599,
-        "narHash": "sha256-rhHyZTGI31/OfgYa9xF49UTchDXTI94pEsSNa0fOkpk=",
+        "lastModified": 1668765800,
+        "narHash": "sha256-rC40+/W6Hio7b/RsY8SvQPKNx4WqNcTgfYv8cUMAvJk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "b457130e8a21608675ddf12c7d85227b22a27112",
+        "rev": "52b2ac8ae18bbad4374ff0dd5aeee0fdf1aea739",
         "type": "github"
       },
       "original": {
@@ -77,6 +100,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "idrac-6": "idrac-6",
         "juso-motion-template": "juso-motion-template",
         "nixpkgs": "nixpkgs",
         "sops-nix": "sops-nix"
