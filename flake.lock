@@ -22,6 +22,26 @@
         "type": "github"
       }
     },
+    "juso-motion-template": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1668710571,
+        "narHash": "sha256-PeSrGKTEEcKPjMNs++XSRbmTEWgO0PwyRlo+RdB9HDI=",
+        "owner": "SeineEloquenz",
+        "repo": "juso-motion-template",
+        "rev": "3ef327b950e290a00f69c9a533353130de36b8cd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SeineEloquenz",
+        "repo": "juso-motion-template",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1668596599,
@@ -57,6 +77,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "juso-motion-template": "juso-motion-template",
         "nixpkgs": "nixpkgs",
         "sops-nix": "sops-nix"
       }

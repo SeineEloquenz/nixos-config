@@ -2,7 +2,7 @@
 
 let
 
-  texlive-juso-template.pkgs = [ pkgs.texlive-juso-template ];
+  texlive-juso-template.pkgs = [ pkgs.juso-motion-template ];
 
   mytexlive = with pkgs; (texlive.combine {
     inherit (texlive) scheme-full;

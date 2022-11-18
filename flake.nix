@@ -11,9 +11,13 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    juso-motion-template = {
+      url = "github:SeineEloquenz/juso-motion-template";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, sops-nix, home-manager }:
+  outputs = inputs@{ self, nixpkgs, sops-nix, home-manager, juso-motion-template }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -25,6 +29,9 @@
           (import ./overlays/layan.nix)
           (import ./overlays/nextcloud-client.nix)
           (import ./pkgs)
+          ( self: super:  {
+            juso-motion-template = inputs.juso-motion-template.packages.${system}.juso-motion-template;
+          })
         ];
       };
       lib = nixpkgs.lib;
