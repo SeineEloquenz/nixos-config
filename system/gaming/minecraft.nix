@@ -1,3 +1,6 @@
 { pkgs, ... }:{
-  programs.prismlauncher.enable = true;
+  programs.prismlauncher = {
+    enable = true;
+    jdks = [ pkgs.jdk ];
+  };
 }
