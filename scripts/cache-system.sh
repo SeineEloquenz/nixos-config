@@ -1,4 +1,4 @@
 #!/bin/sh
-pushd ~/.dotfiles
+pushd ~/.dotfiles > /dev/null
 nix-copy-closure -s nix-cache result
-popd
+popd > /dev/null

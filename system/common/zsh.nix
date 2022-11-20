@@ -11,10 +11,7 @@
       enableAutosuggestions = true;
 
       shellAliases = {
-        asystem = "sh ~/.dotfiles/scripts/apply-system.sh";
-        csystem = "sh ~/.dotfiles/scripts/cache-system.sh";
-        usystem = "sh ~/.dotfiles/scripts/update-system.sh";
-        ball = "sh ~/.dotfiles/scripts/build-all.sh";
+        config = "bash ~/.dotfiles/scripts/cfg.sh";
         dump-wifi = "sh ~/.dotfiles/scripts/dump-wifi.sh";
       };
 

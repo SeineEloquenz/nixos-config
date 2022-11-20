@@ -12,7 +12,7 @@ if [ "$1" == "-c" ]; then
 else
   arg=""
 fi
-pushd ~/.dotfiles
+pushd ~/.dotfiles > /dev/null
   echo -e "${color}Rebuilding system...$nocolor"
   nixos-rebuild build $arg --flake . && sudo nixos-rebuild switch --flake .
   echo -e "${color}Finished.$nocolor"
@@ -21,4 +21,4 @@ pushd ~/.dotfiles
     sh ./scripts/cache-system.sh
     echo -e "${color}Finished.$nocolor"
   fi
-popd
+popd > /dev/null
