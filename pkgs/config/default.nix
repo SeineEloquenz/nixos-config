@@ -15,5 +15,5 @@ pkgs.runCommand "config" {
     --subst-var-by git "${pkgs.git}"
 
   install -D -m755 ${./completion.zsh} \
-    $out/share/zsh/site-functions/_home-manager
+    $out/share/zsh/site-functions/_config
 ''
