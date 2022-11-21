@@ -3,6 +3,7 @@
 {
 
   environment.pathsToLink = [ "/share/zsh" ];  
+  environment.systemPackages = [ pkgs.configurationhelper ];
 
   home-manager.users.alexa = {
     programs.zsh = {
@@ -11,7 +12,6 @@
       enableAutosuggestions = true;
 
       shellAliases = {
-        config = "bash ~/.dotfiles/scripts/cfg.sh";
         dump-wifi = "sh ~/.dotfiles/scripts/dump-wifi.sh";
       };
 
