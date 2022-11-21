@@ -13,6 +13,7 @@
           "espresso@coadmunkee.github.com"
           "appindicatorsupport@rgcjonas.gmail.com"
           "ddterm@amezin.github.com"
+          "nothing-to-say@extensions.gnome.wouter.bolsterl.ee"
         ];
       };
 
