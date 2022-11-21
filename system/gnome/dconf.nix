@@ -20,6 +20,10 @@
         current-workspace-only = true;
       };
 
+      "org/gnome/shell/extensions/nothing-to-say" = {
+        keybinding-toggle-mute= [ "<Super>dead_acute" ];
+      };
+
       "com/github/amezin/ddterm" = {
         window-monitor = "primary";
         window-size = 1.0;

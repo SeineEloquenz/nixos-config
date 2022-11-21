@@ -50,6 +50,7 @@
     gnomeExtensions.gsconnect
     gnomeExtensions.ddterm
     gnomeExtensions.vitals
+    gnomeExtensions.nothing-to-say
     # Gnome Software
     gnome.gnome-terminal
     gnome.gnome-tweaks
