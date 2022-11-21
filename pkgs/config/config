@@ -14,10 +14,10 @@ The operation is one of the following:
   push:		push our configuration
   status:	show configuration status
   update:	update configuration inputs
+  help:		show this help information
 
 Options:
 
-  --help               show this information
   --cache              use private binary cache
 EOF
     exit 1
@@ -30,7 +30,7 @@ pushd ~/.dotfiles > /dev/null
 while [ "$#" -gt 0 ]; do
     i="$1"; shift 1
     case "$i" in
-      --help)
+      help)
         showSyntax
         ;;
       apply|cache|build|build-all|pull|push|status|update)
