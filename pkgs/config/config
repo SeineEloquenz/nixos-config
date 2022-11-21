@@ -8,6 +8,7 @@ The operation is one of the following:
 
   apply:	make the configuration the boot default and activate now
   cache:	cache our store
+  build:	build the system configuration
   build-all:	build all configured systems
   pull:		pull the most recent configuration version
   push:		push our configuration
@@ -32,11 +33,11 @@ while [ "$#" -gt 0 ]; do
       --help)
         showSyntax
         ;;
-      apply|cache|build-all|pull|push|status|update)
+      apply|cache|build|build-all|pull|push|status|update)
         action="$i"
         ;;
       --cache)
-        cache=1
+        cache="-c"
         ;;
       *)
         echo "$0: unknown option \`$i'"
@@ -48,15 +49,13 @@ done
 if [ -z "$action" ]; then showSyntax; fi
 
 if [ "$action" = apply ]; then
-    if [ "$cache" = 1 ]; then
-        bash ./scripts/apply-system.sh -c
-    else
-        bash ./scripts/apply-system.sh
-    fi
+    bash ./scripts/apply-system.sh $cache
 elif [ "$action" = cache ]; then
     bash ./scripts/cache-system.sh
+elif [ "$action" = build ]; then
+    bash ./scripts/build-system.sh $(hostname) $cache
 elif [ "$action" = build-all ]; then
-    bash ./scripts/build-all.sh
+    bash ./scripts/build-all.sh $cache
 elif [ "$action" = pull ]; then
     git pull
 elif [ "$action" = push ]; then
