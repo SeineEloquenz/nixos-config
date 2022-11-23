@@ -18,7 +18,8 @@ The operation is one of the following:
 
 Options:
 
-  --cache              use private binary cache
+  --cache	use private binary cache
+  --push	push update
 EOF
     exit 1
 }
@@ -26,6 +27,7 @@ EOF
 # Parse the command line.
 action=
 cache=
+push=
 pushd ~/.dotfiles > /dev/null
 while [ "$#" -gt 0 ]; do
     i="$1"; shift 1
@@ -38,6 +40,9 @@ while [ "$#" -gt 0 ]; do
         ;;
       --cache)
         cache="-c"
+        ;;
+      --push)
+        push="-p"
         ;;
       *)
         echo "$0: unknown option \`$i'"
@@ -63,7 +68,7 @@ elif [ "$action" = push ]; then
 elif [ "$action" = status ]; then
     git status
 elif [ "$action" = update ]; then
-    bash ./scripts/update-system.sh
+    bash ./scripts/update-system.sh $push
 else
     showSyntax
 fi

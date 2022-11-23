@@ -11,4 +11,8 @@ case $line[1] in
         _arguments \
             "--cache[Use our binary cache]"
     ;;
+    update)
+        _arguments \
+            "--push[push update to remote]"
+    ;;
 esac
