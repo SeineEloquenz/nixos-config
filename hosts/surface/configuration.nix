@@ -18,6 +18,8 @@
       ../../system/apps/office.nix
     ];
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   networking.networkmanager.specific-networks = [
     "MCG-VPN"
   ];
