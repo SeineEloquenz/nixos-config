@@ -68,6 +68,7 @@
       };
     in {
       nixosConfigurations = {
+        mcggenesis = mkSystem "mcggenesis";
         mcgpres = mkSystem "mcgpres";
         mcgzen = mkSystem "mcgzen";
         surface = mkSystem "surface";
