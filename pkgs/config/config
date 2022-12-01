@@ -13,6 +13,7 @@ The operation is one of the following:
   pull:		pull the most recent configuration version
   push:		push our configuration
   status:	show configuration status
+  repair:	repair the nix store
   update:	update configuration inputs
   help:		show this help information
 
@@ -35,7 +36,7 @@ while [ "$#" -gt 0 ]; do
       help)
         showSyntax
         ;;
-      apply|cache|build|build-all|pull|push|status|update)
+      apply|cache|build|build-all|pull|push|status|repair|update)
         action="$i"
         ;;
       --cache)
@@ -67,6 +68,8 @@ elif [ "$action" = push ]; then
     git push
 elif [ "$action" = status ]; then
     git status
+elif [ "$action" = repair ]; then
+    bash ./scripts/repair-store.sh
 elif [ "$action" = update ]; then
     bash ./scripts/update-system.sh $push
 else
