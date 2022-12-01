@@ -101,6 +101,8 @@
     lm_sensors
     nano
     htop
+    iotop
+    btop
     curl
     wget
     git
