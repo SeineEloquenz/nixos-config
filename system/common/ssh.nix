@@ -128,9 +128,35 @@
           user = "root";
           identityFile = "~/.ssh/keys/guests";
         };
+
         "nix-cache.internal.mondcarion.group" = {
           user = "root";
           identityFile = "~/.ssh/keys/guests";
+        };
+
+        "pc.internal.mondcarion.group" = {
+          user = "alexa";
+          identityFile = "~/.ssh/id_ecdsa";
+        };
+
+        "pc.offsite.mondcarion.group" = {
+          user = "alexa";
+          identityFile = "~/.ssh/id_ecdsa";
+        };
+
+        "zenbook.internal.mondcarion.group" = {
+          user = "alexa";
+          identityFile = "~/.ssh/id_ecdsa";
+        };
+
+        "zenbook.offsite.mondcarion.group" = {
+          user = "alexa";
+          identityFile = "~/.ssh/id_ecdsa";
+        };
+
+        "genesis.offsite.mondcarion.group" = {
+          user = "alexa";
+          identityFile = "~/.ssh/id_ecdsa";
         };
       };
     };
