@@ -3,6 +3,7 @@
 {
   imports =
     [
+      ./android.nix
       ./bitwarden.nix
       ./printing.nix
       ./networking.nix
