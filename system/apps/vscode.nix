@@ -11,6 +11,10 @@
       package = pkgs.vscodium;
       extensions = with pkgs.vscode-extensions; [
         redhat.vscode-yaml
+        ms-python.python
+        ms-azuretools.vscode-docker
+        haskell.haskell
+        jnoortheen.nix-ide
       ];
     };
 
