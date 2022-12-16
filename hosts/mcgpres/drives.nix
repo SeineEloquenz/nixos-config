@@ -6,7 +6,10 @@
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."luks-cb69389d-8118-4c2a-af8a-6d92848d6bad".device = "/dev/disk/by-uuid/cb69389d-8118-4c2a-af8a-6d92848d6bad";
+  boot.initrd.luks.devices."luks-cb69389d-8118-4c2a-af8a-6d92848d6bad" = {
+    device = "/dev/disk/by-uuid/cb69389d-8118-4c2a-af8a-6d92848d6bad";
+    bypassWorkqueues = true;
+  };
 
   # IData
   fileSystems."/run/media/alexa/IData" = {
@@ -14,7 +17,10 @@
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."luks-106a5e3c-09e7-4b76-9fb8-fc1d6bc04e35".device = "/dev/disk/by-uuid/106a5e3c-09e7-4b76-9fb8-fc1d6bc04e35";
+  boot.initrd.luks.devices."luks-106a5e3c-09e7-4b76-9fb8-fc1d6bc04e35" = {
+    device = "/dev/disk/by-uuid/106a5e3c-09e7-4b76-9fb8-fc1d6bc04e35";
+    bypassWorkqueues = true;
+  };
 
   # Data
   fileSystems."/run/media/alexa/Data" = {
@@ -22,5 +28,7 @@
       fsType = "ext4";
     };
 
-  boot.initrd.luks.devices."luks-1ed6e501-d8f1-4fe6-919b-6fabad7a646e".device = "/dev/disk/by-uuid/1ed6e501-d8f1-4fe6-919b-6fabad7a646e";
+  boot.initrd.luks.devices."luks-1ed6e501-d8f1-4fe6-919b-6fabad7a646e" = {
+    device = "/dev/disk/by-uuid/1ed6e501-d8f1-4fe6-919b-6fabad7a646e";
+  };
 }

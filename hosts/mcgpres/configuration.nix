@@ -26,6 +26,8 @@
     ];
   };
 
+  boot.initrd.luks.devices."luks-34b0b579-752b-42b4-80f6-785b31e71e62".bypassWorkqueues = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
