@@ -15,6 +15,17 @@ in {
     ./vscode.nix
   ];
 
+  programs.kubernetes = {
+    enable = true;
+    enable-helm = true;
+
+    user = "alexa";
+
+    clusters = [
+      "gaymops"
+    ];
+  };
+
   environment.systemPackages = with pkgs; [
     jetbrains.webstorm
     jetbrains.idea-ultimate

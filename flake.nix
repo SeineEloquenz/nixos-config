@@ -48,6 +48,7 @@
           home-manager.useUserPackages = true;
         }
         # Our modules
+        ./modules/kubernetes.nix
         ./modules/ssh-keys.nix
         ./modules/networks.nix
         ./modules/prismlauncher.nix
