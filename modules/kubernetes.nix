@@ -13,7 +13,9 @@ let cfg = config.programs.kubernetes;
     };
   };
 
-  buildKubeconfigVariable = configs: user: lib.fold (first: second: first + ":" + second) "" (map (path user) configs);
+  buildKubeconfigVariable = configs: user: {
+    KUBECONFIG = lib.fold (first: second: first + ":" + second) "" (map (path user) configs);
+  };
 
   kubeConfigs = user: lib.listToAttrs (map (createKubeconfig user) config.programs.kubernetes.clusters);
 in {
@@ -39,8 +41,9 @@ in {
   config = lib.mkIf cfg.enable {
     sops.secrets = kubeConfigs cfg.user;
 
-    home-manager.users.${cfg.user}.home.sessionVariables = {
-      KUBECONFIG = buildKubeconfigVariable cfg.clusters cfg.user;
+    home-manager.users.${cfg.user} = {
+      programs.bash.sessionVariables = buildKubeconfigVariable cfg.clusters cfg.user;
+      programs.zsh.sessionVariables = buildKubeconfigVariable cfg.clusters cfg.user;
     };
 
     environment.systemPackages = with pkgs; [
