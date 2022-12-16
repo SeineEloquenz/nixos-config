@@ -37,8 +37,8 @@
   };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-075b0e5a-44d0-4383-b496-8763d1ef4875".device = "/dev/disk/by-uuid/075b0e5a-44d0-4383-b496-8763d1ef4875";
-  boot.initrd.luks.devices."luks-075b0e5a-44d0-4383-b496-8763d1ef4875".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-4e29a1ac-b2fe-44fd-956d-183e308be97e".device = "/dev/disk/by-uuid/4e29a1ac-b2fe-44fd-956d-183e308be97e";
+  boot.initrd.luks.devices."luks-4e29a1ac-b2fe-44fd-956d-183e308be97e".keyFile = "/crypto_keyfile.bin";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
