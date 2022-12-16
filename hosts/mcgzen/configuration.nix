@@ -24,6 +24,8 @@
     "MCG-VPN"
   ];
 
+  boot.initrd.luks.devices."luks-4cbdf9e0-1094-4d7d-af4c-e5134f160001".bypassWorkqueues = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
