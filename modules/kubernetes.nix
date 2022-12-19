@@ -41,9 +41,12 @@ in {
   config = lib.mkIf cfg.enable {
     sops.secrets = kubeConfigs cfg.user;
 
-    home-manager.users.${cfg.user} = {
-      programs.bash.sessionVariables = buildKubeconfigVariable cfg.clusters cfg.user;
-      programs.zsh.sessionVariables = buildKubeconfigVariable cfg.clusters cfg.user;
+    home-manager.users.${cfg.user}.programs = {
+      bash.sessionVariables = buildKubeconfigVariable cfg.clusters cfg.user;
+      zsh.sessionVariables = buildKubeconfigVariable cfg.clusters cfg.user;
+      vscode.extensions = (if config.home-manager.users.${cfg.user}.programs.vscode.enable then [
+        pkgs.vscode-extensions.ms-kubernetes-tools.vscode-kubernetes-tools
+      ] else []);
     };
 
     environment.systemPackages = with pkgs; [

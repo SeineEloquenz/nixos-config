@@ -11,7 +11,6 @@
       package = pkgs.vscodium;
       extensions = with pkgs.vscode-extensions; [
         redhat.vscode-yaml
-        ms-kubernetes-tools.vscode-kubernetes-tools
         ms-python.python
         ms-azuretools.vscode-docker
         haskell.haskell
