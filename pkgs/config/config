@@ -15,6 +15,7 @@ The operation is one of the following:
   status:	show configuration status
   repair:	repair the nix store
   update:	update configuration inputs
+  reset:	resets config to latest remote revision
   help:		show this help information
 
 Options:
@@ -36,7 +37,7 @@ while [ "$#" -gt 0 ]; do
       help)
         showSyntax
         ;;
-      apply|cache|build|build-all|pull|push|status|repair|update)
+      apply|cache|build|build-all|pull|push|status|repair|update|reset)
         action="$i"
         ;;
       --cache)
@@ -72,6 +73,8 @@ elif [ "$action" = repair ]; then
     bash ./scripts/repair-store.sh
 elif [ "$action" = update ]; then
     bash ./scripts/update-system.sh $push
+elif [ "$action" = reset ]; then
+    git reset origin/HEAD --hard
 else
     showSyntax
 fi
