@@ -15,6 +15,7 @@
         ms-azuretools.vscode-docker
         haskell.haskell
         jnoortheen.nix-ide
+        arrterian.nix-env-selector
       ];
     };
 
