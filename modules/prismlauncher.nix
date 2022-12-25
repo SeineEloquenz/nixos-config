@@ -18,6 +18,6 @@ with lib;
   };
 
   config = mkIf config.programs.prismlauncher.enable {
-    environment.systemPackages = [ (pkgs.prismlauncher.override { jdks = config.programs.prismlauncher.jdks; }) ];
+    environment.systemPackages = [ (pkgs.prismlauncher-qt5.override { jdks = config.programs.prismlauncher.jdks; }) ];
   };
 }
