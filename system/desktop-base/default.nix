@@ -21,9 +21,6 @@
     PATH = [ 
       "\${XDG_BIN_HOME}"
     ];
-
-    # Fix electron on Wayland
-    NIXOS_OZONE_WL = "1";
   };
 
   # Enable the X11 windowing system.
