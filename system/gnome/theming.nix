@@ -5,7 +5,7 @@ with lib;
 let
   buildVars = themeName: {
     QT_STYLE_OVERRIDE = "kvantum";
-    GTK_THEME = themeName;
+#    GTK_THEME = themeName;
   };
   wallpaper = ../../files/wallpaper.png;
   themeEnv = theme: pkgs.buildEnv {
