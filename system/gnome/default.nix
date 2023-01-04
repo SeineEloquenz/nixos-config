@@ -23,6 +23,7 @@
     enable = true;
     qtTheme = {
       name = "Layan-Dark";
+      kvantumName = "LayanSolidDark";
       package = pkgs.layan-kde;
     };
     gtkTheme = {

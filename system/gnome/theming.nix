@@ -43,7 +43,21 @@ in {
     gtkTheme = themeOption;
     cursorTheme = themeOption;
     iconTheme = themeOption;
-    qtTheme = themeOption;
+    qtTheme = mkOption {
+      type = types.submodule {
+        options = {
+          name = mkOption {
+            type = types.str;
+          };
+          kvantumName = mkOption {
+            type = types.str;
+          };
+          package = mkOption {
+            type = types.package;
+          };
+        };
+      };
+    };
     font = themeOption;
   };
 
@@ -68,7 +82,7 @@ in {
 
       xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
         [General]
-        theme=${theming.qtTheme.name}
+        theme=${theming.qtTheme.kvantumName}
       '';
 
       gtk.enable = true;
