@@ -66,7 +66,10 @@ in {
       home.sessionVariables = buildVars theming.gtkTheme.name;
       systemd.user.sessionVariables = buildVars theming.gtkTheme.name;
 
-      xdg.configFile."Kvantum/kvantum.kvconfig".source = ./../../files/kvantum.kvconfig;
+      xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
+        [General]
+        theme=${theming.qtTheme.name}
+      '';
 
       gtk.enable = true;
 

@@ -22,12 +22,12 @@
   theming = {
     enable = true;
     qtTheme = {
-      name = "Layan-KDE";
+      name = "Layan-Dark";
       package = pkgs.layan-kde;
     };
     gtkTheme = {
-      name = "Layan-Dark";
-      package = pkgs.layan-gtk-theme;
+      name = "Orchis-Pink-Dark-Compact";
+      package = pkgs.orchis-gtk;
     };
     cursorTheme = {
       name = "Numix-Cursor";
