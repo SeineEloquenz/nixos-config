@@ -8,6 +8,7 @@
       ./printing.nix
       ./networking.nix
       ./audio.nix
+      ./electron.nix
       ./firefox.nix
     ];
 

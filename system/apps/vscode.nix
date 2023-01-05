@@ -24,7 +24,7 @@
       Actions=new-empty-window
       Categories=Utility;TextEditor;Development;IDE
       Comment=Code Editing. Redefined.
-      Exec=codium %F
+      Exec=codium --disable-gpu %F
       GenericName=Text Editor
       Icon=code
       Keywords=vscode
