@@ -6,12 +6,12 @@
 , gtk-engine-murrine
 , sassc
 , border-radius ? null # Suggested: 2 < value < 16
-, tweaks ? [ ] # can be "solid" "compact" "black" "primary" "macos"
+, tweaks ? [ ] # can be "solid" "compact" "black" "primary" "macos" "submenu"
 , withWallpapers ? false
 }:
 
 let
-  validTweaks = [ "solid" "compact" "black" "primary" "macos" ];
+  validTweaks = [ "solid" "compact" "black" "primary" "macos" "submenu" ];
   unknownTweaks = lib.subtractLists validTweaks tweaks;
 in
 assert lib.assertMsg (unknownTweaks == [ ]) ''
@@ -21,13 +21,13 @@ assert lib.assertMsg (unknownTweaks == [ ]) ''
 
 stdenvNoCC.mkDerivation rec {
   pname = "orchis-theme";
-  version = "7230ab23c9ffc10ef53ed9e9c5f2829eb65e9e70";
+  version = "b0454d8319b52bc60776c50245b3f7dc3b95e8aa";
 
   src = fetchFromGitHub {
     repo = "Orchis-theme";
-    owner = "vinceliuice";
+    owner = "SeineEloquenz";
     rev = version;
-    sha256 = "02lw4hwqm6sdmzsks7wzg8i1wszhxhcyx7jshfrc911wrwrmjc93";
+    sha256 = "11g6xk83skifb4wp633znmm03fmljln9g1nmghycbvqqw5k07iq9";
   };
 
   nativeBuildInputs = [ gtk3 sassc ];
