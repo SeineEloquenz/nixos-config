@@ -2,7 +2,7 @@
 local line
 
 _arguments -C \
-    "1: :(apply cache build build-all pull push status repair update reset help)" \
+    "1: :(apply test cache build build-all pull push status repair update reset help)" \
     "*::arg:->args"
 
 

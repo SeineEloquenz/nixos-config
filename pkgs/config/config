@@ -7,6 +7,7 @@ Usage: $0 [OPTIONS...] OPERATION
 The operation is one of the following:
 
   apply:	make the configuration the boot default and activate now
+  test:		activate the configuration now but don't make it boot default
   cache:	cache our store
   build:	build the system configuration
   build-all:	build all configured systems
@@ -37,7 +38,7 @@ while [ "$#" -gt 0 ]; do
       help)
         showSyntax
         ;;
-      apply|cache|build|build-all|pull|push|status|repair|update|reset)
+      apply|test|cache|build|build-all|pull|push|status|repair|update|reset)
         action="$i"
         ;;
       --cache)
@@ -57,6 +58,8 @@ if [ -z "$action" ]; then showSyntax; fi
 
 if [ "$action" = apply ]; then
     bash ./scripts/apply-system.sh $cache
+elif [ "$action" = test ]; then
+    sudo nixos-rebuild test --flake .
 elif [ "$action" = cache ]; then
     bash ./scripts/cache-system.sh
 elif [ "$action" = build ]; then
