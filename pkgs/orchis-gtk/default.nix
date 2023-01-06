@@ -21,7 +21,7 @@ assert lib.assertMsg (unknownTweaks == [ ]) ''
 
 stdenvNoCC.mkDerivation rec {
   pname = "orchis-theme";
-  version = "b0454d8319b52bc60776c50245b3f7dc3b95e8aa";
+  version = "55812fc52fe2c78bedeb523a0f26c42f138e2534";
 
   src = fetchFromGitHub {
     repo = "Orchis-theme";
