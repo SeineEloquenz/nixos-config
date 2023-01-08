@@ -76,23 +76,5 @@
     AusweisApp2
     tor-browser-bundle-bin
   ];
-
-  # Fonts
-
-  fonts.fonts = with pkgs; [
-    noto-fonts
-    roboto
-    roboto-mono
-    emojione
-    montserrat
-    (nerdfonts.override { fonts = ["RobotoMono"]; })
-  ];
-  fonts.enableDefaultFonts = true;
-  fonts.fontconfig.defaultFonts = {
-    monospace = ["RobotoMono Nerd Font"];
-    sansSerif = ["Montserrat Bold"];
-    serif = ["Noto Serif"];
-  };
-
 }
 
