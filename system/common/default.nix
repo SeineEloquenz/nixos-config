@@ -100,6 +100,7 @@
     # base
     lm_sensors
     nano
+    tree
     htop
     iotop
     btop
